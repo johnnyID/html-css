@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+
+body{
+    /* Alterando a cor de fundo do site, utilizando um degradê */
+    background-image: linear-gradient(45deg, #0C7D74, #0F353D);
+
+    /* Fixando a cor de fundo para toda parte do site, assim a cor não vai se repetir várias vezes. */
+    background-attachment: fixed;
+}
+
+h1{
+    /* Alterando a cor da hierarquia de títulos. */
+    color: #FFAE00;
+
+    /* Centraliza o texto. */
+    text-align: center;
+
+    /* Adiciona uma sombra no texto. O primeiro param controla o quanto , o segundo o quanto a sombra vai para baixo ou para cima, o terceiro o espalhamento, e o quarto a cor da sombra. */
+    text-shadow: 2px 2px 2px #8b5f00cc;
+
+    /* Altera a familia da fonte */
+    font-family: 'Times New Roman', Times, serif;
+
+    /* Altera o estilo da fonte. */
+    font-style: italic;
+}
+
+h2{
+    /* Alterando a cor da hierarquia de títulos. */
+    color: rgb(2, 112, 74);
+
+    /* Altera a familia da fonte */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    /* Altera a familia da fonte */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* Altera o tamanho da fonte.
+    Altamente recomendado utilizar como medida de tamanho: pixels(px) ou a medida relativa ao tamanho da fonte(em, que trabalha com porcentagem.)
+    16px = 1em */
+    font-size: 1.05em;
+    
+    /* Adaptando o parágrafo à borda da tela. */
+    text-align: justify;
+}
+
+main{
+    /* Alterando a cor de fundo do conteúdo principal. */
+    background-color: white;
+
+    /* alterando a borda da janela que contém o conteúdo principal, utilizando pixels como parâmetro. */
+    border-radius: 10px;
+
+    /* Adicionando sombra para a janela, passando os valores dos parâmetro, sendo eles: primeiro param adiciona quanto que a sombra vai para o lado, segundo param adiciona o quanto a sombra vai para baixo, o terceiro controla o espalhamento da sombra, e o quarto adiciona a cor. */
+    box-shadow: 5px 5px 15px #0f353dc9;
+
+    /* Controla a largura */
+    width: 600px;
+
+    /* Controla o espaçamento das bordas da janela em relação ao conteúdo. */
+    padding: 10px;
+
+    /* Centraliza a janela. Com o param AUTO, a centralização permanece dinâmica, independente da janela do site ficar menor ou maior. */
+    margin: auto;
+
+}

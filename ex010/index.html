@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <h1>Estrutura para Associar Links</h1>
+    <h2>
+        Estrutura básica
+    </h2>
+        <p>
+        Utilizamos a tag <strong>&lt;a&gt;&lt;/a&gt;</strong> com o parâmetro <strong>href=""</strong> para associarmos o conteúdo à um site externo ou interno. O parâmetro <strong>href=""</strong> é onde adicionamos o caminho/url do site para qual estamos direcionando o usuário, sendo um site externo ou interno, sobrepondo a página do mesmo. Vejamos.
+        </p>
+        <pre>
+            <code>
+    &lt;a href=""&gt;&lt;/a&gt; <- Corpo da estrutura
+            </code>
+        </pre>
+        <h3>
+            Parâmetros
+        </h3>
+        <ul>
+            <li>href=""</li>
+            <p>Utilizado para associarmos o conteúdo à um site externo ou interno para o qual estamos direcionando o usuário. 
+            </p>
+            <ul>
+                <li type="">
+                    Link Externo
+                </li>
+                <p>
+                    Para o link externo, passamos como parâmetro, a url do site, Vejamos.
+                </p>
+                <pre>
+                    <code>
+    &lta href="https://ww.youtube.com"&gt; Clique aqui &lt;/a&gt;
+                    </code>
+                </pre>
+                <li>Link Interno</li>
+                <p>
+                    Para o link Interno, passamos como o parâmetro o caminho do diretório onde está o arquivo de outra página do mesmo site, Vejamos.
+                </p>
+                <pre>
+                    <code>
+    &lt;a href="pag002.html"&gt; Clique aqui &lt/a&gt;
+                    </code>
+                </pre>
+                <p>
+                    O código acima utiliza de uma estrutura que o caminho do arquivo está em uma mesma pasta do código da página principal do site, ou seja, apenas  adicionamos o arquivo da página que queremos, tanto para irmos para a próxima página quanto para voltarmos de página.
+                </p>
+                <pre>
+                    <code>
+    &lt;a href="arpa/pag003.html"&gt; Clique aqui &lt;/a&gt;
+                    </code>
+                </pre>
+                <pre>
+                    <code>
+    &lt;a href="../pag003.html"&gt; CLique aqui &lt;/a&gt;
+                    </code>
+                </pre>
+                <p>
+                    O código acima utiliza de uma estrutura onde o objetivo é voltar de página(página principal do site, por exemplo). O caminho do arquivo está em uma pasta diferente do código da página principal do site, ou seja, é preciso utilizar de ../ para voltar uma hierarquia do diretório.
+                    <br><br><strong>Obs:</strong> Ao adicionarmos o caminho do diretório, utilizamos do sistema utilizado no Linux, onde a hierarquia de diretório existe.<br>./ -> Significa que está em uma mesma pasta. <br>../ -> Volta 1 pasta.<br>../../ -> Volta 2 pastas.<br>../../../ -> Volta 3 pastas e por assim vai.<br>Ou seja, tudo vai depender da hierarquia de diretório onde o arquivo se encontra.
+                </p>
+            </ul>
+            <li>target=""</li>
+            <ul>
+                <p>
+                    Utilizado para especificar se o usuário vai abrir uma nova janela, ou se vai sobrepor a página em que se encontra por outra.
+                </p>
+                <li>target="_blank"</li>
+                <pre>
+                    <code>
+&lt;a href="https://www.youtube.com" target="_blank"&gt; Clique aqui &lt;/a&gt;
+                    </code>
+                </pre>
+                <p>
+                    Será aberto uma nova janela para o site que o usuário deseja acessar.
+                </p>
+                <li>
+                    target="_self"
+                </li>
+                <pre>
+                    <code>
+&lt;a href="https://www.youtube.com" target="_self"&gt; Clique aqui &lt;/a&gt;
+                    </code>
+                </pre>
+            </ul>
+            <li>rel=""</li>
+            <ul>
+                <p>
+                    Utilizado para forma de busca do google, indica se o link é externo, se o link vai para uma próxima página ou para uma anterior.
+                </p>
+                <li>
+                    rel="external"
+                </li>
+                <pre>
+                    <code>
+&lt;a href="https://www.youtube.com" rel="external"&gt; Clique aqui &lt;/a&gt;
+                    </code>
+                </pre>
+                <p>
+                    Indicando que o link é externo, ou seja, vai para algum outro site.
+                </p>
+                <li>
+                    re="next"
+                </li>
+                <pre>
+                    <code>
+&lt;a href="pag002.html" rel="next"&gt; Clique aqui &lt;/a&gt;
+                    </code>
+                </pre>
+                <p>
+                    Indicando que o link vai redirecionar o usuário para uma próxima página do mesmo site.
+                </p>
+                <li>
+                    re="prev" / re="previous"
+                </li>
+                <pre>
+                    <code>
+&lt;a href="../pag002.html" rel="prev"&gt; Clique aqui &lt;/a&gt;
+                    </code>
+                </pre>
+            </ul>
+        </ul>
+</body>
+</html>

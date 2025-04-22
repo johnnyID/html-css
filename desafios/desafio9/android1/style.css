@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@font-face{
+    font-family: "Android";
+    src: url(./fontes/idroid.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Modificando o corpo da página */
+body{
+    margin: 0px;
+    background-color: rgba(38, 216, 127, 0.582);
+}
+
+/* Personalizando o cabeçalho */
+header{
+    padding: 1px;
+    margin: auto;
+    background-image: linear-gradient(0deg, darkgreen, lightgreen);
+}
+
+header > div > p, header > p{
+    text-indent: 0px;
+}
+
+/* Personalizando a parte que contém o conteúdo principal */
+main{
+    padding: 10px;
+    background-color: white;
+    margin: auto;
+    max-width: 800px;
+}
+
+footer{
+    margin-bottom: 20px;
+    background-color: black;
+}
+
+footer > p{
+    color: white;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2, h3{
+    font-family: "Android";
+}
+
+h4{
+    color: white;
+    padding: 6px;
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+p#cabecalho{
+    margin: auto;
+    width: 550px;
+    text-align: center;
+    font-weight: bold;
+}
+
+header > div > p{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Personalizando os links */
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Adicionando um adereço visual aos links */
+a.aderecos::after{
+    content: "🔗";
+}
+
+/* Centralizando imagens */
+img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* Centralizando video do YouTube */
+iframe{
+    display: block;
+    margin: auto;
+}
+
+section#extra{
+    background-color: rgba(76, 192, 76, 0.219);
+    border-radius: 8px;
+}
+
+main > article > section > div{
+    background-color: rgb(63, 170, 63);
+    margin: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+nav{
+    margin-right: 100px;
+    display: inline-block;
+    padding: 6px;
+}
+

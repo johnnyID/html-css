@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-class</title>
+    <style>
+        @charset "UTF-8";
+
+        header > h1{
+            text-align: center;
+        }
+
+        p{
+            text-indent: 30px;
+            text-align: justify;
+            font: normal normal 1em Arial, Helvetica, sans-serif;
+        }
+        
+        /* Conceito aplicado de Pseudo-Class */
+        div#principal:hover{
+            color: red;
+            font: italic bold 1em Arial, Helvetica, sans-serif;
+            background-color: grey;
+            width: 150px;
+            border: 2px solid black;
+            border-radius: 6px;
+        }
+
+        /* Aplicando conceito de Filho */
+        div > p{
+            display: none;
+            text-indent: 0px;
+            color: red;
+            background-color: grey;
+            border: 1px solid black;
+            border-radius: 4px;
+            width: 95px;
+        }
+
+        div:hover > p{
+            display: block;
+        }
+
+        body{
+            background-color: rgba(0,0,0,0.700);
+        }
+
+        header{
+            background-color: white;
+            border-radius: 6px;
+            width: 250px;
+            margin: auto auto 20px auto;
+            box-shadow: 6px 6px 10px rgba(0,0,0,0.500);
+        }
+
+        main{
+            background-color: white;
+            padding: 4px;
+            border-radius: 6px;
+            margin: auto;
+            width: 750px;
+            box-shadow: 6px 6px 10px rgba(0,0,0,0.500);
+        }
+
+        a#sei:visited{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Pseudo-Class</h1>
+    </header>
+
+    <main>
+        <h2>Conceito</h2>
+        
+        <p>
+            Pseudo-Class permite personalizar conteúdo com base em seu <strong>estado</strong>, por exemplo, ao passar o mouse por cima de algum tipo de elemento com a pseudo-class: <strong>:hover</strong>, podemos adicionar um texto, imagem, link, ou alterar as cores, família, estilo, peso, tamanhos de fontes... Algumas Pseudo-Classes:
+        </p>
+
+        <dl>
+            <dt>:hover</dt>
+            <dd>Ao passar o mouse por cima, ocorre alguma ação</dd>
+            <dt>:active</dt>
+            <dd>Quando ativado, ocorre alguma ação</dd>
+            <dt>:any-link</dt>
+            <dd>Permite estilizar todos os links</dd>
+            <dt>:visited</dt>
+            <dd>Após visitar um link, o seu estado será alterado</dd>
+        </dl>
+
+        <h2>Aplicando Conceito</h2>
+        <div id="principal">
+            &gt Passe o mouse &lt
+        </div>
+        <h1>Conceito de filho</h1>
+        <p>
+            Tem como objetivo, alterar/personalizar apenas os elementos contidos dentro de algum elemento pai, vejamos:
+        </p>
+        <pre>
+            <code>
+    div > p{
+        display: none;
+    }
+            </code>
+        </pre>
+        <p>
+            Acima, a &ltdiv&gt oculta o parágrafo contido em si. Qualquer outra personalização do parágrafo filho afetará apenas a si mesmo, assim, outros parágrafos de fora estão isentos da personalização.
+        </p>
+        <p>
+            Para visualizar a informação oculta, basta acrescentarmos a pseudo-class <strong>:hover</strong> com a declaração: display: block; Vejamos:
+        </p>
+        <pre>
+            <code>
+    div:hover > p{
+        display: block;
+    }
+            </code>
+        </pre>
+        <h2>
+            Aplicando Conceito
+        </h2>
+        <div>
+            Visualizar informação oculta
+            <p>
+                Colecionador
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>

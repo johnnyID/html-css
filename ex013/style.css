@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Vinland';
+    src: url('fontes/Vinland.ttf') format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'Vinland';
+    font-size: 3em;
+    font-weight: normal;
+    font-style: normal;
+}
+
+p{
+    /* Cria uma identação/espaçamento no início do parágrafo. */
+    text-indent: 30px;
+    
+    font-family: 'Vinland';
+    font-size: 1.2em;
+    text-align: justify;
+}

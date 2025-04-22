@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+    <style>
+        @charset "UTF-8";
+
+        body{
+            background-color: rgba(0,0,0,0.80);
+            margin: 0px;
+        }
+
+        header{
+            background-color: white;
+            width: 200px;
+            margin: auto;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        main{
+            background-color: white;
+            width: 800px;
+            margin: auto;
+            border-radius: 10px;
+            padding: 6px;
+        }
+
+        div{
+            background-color: rgba(128, 128, 128, 0.452);
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 400px;
+            padding: 4px;
+            margin-left: 8px;
+            margin-bottom: 8px;
+        }
+
+        footer > p{
+            color: white;
+            text-align: center;
+            padding: 2px;
+        }
+
+        footer{
+            background-color: black;
+        }
+
+        .indentacao{
+            text-indent: 30px;
+        }
+
+        .sem-serifa{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .azul{
+            color: blue;
+        }
+
+        .peso{
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Classes</h1>
+    </header>
+
+    <main>
+        <h2>Conceito de Class</h2>
+        <p class="indentacao">
+            Class é uma forma de organizar uma configuração/personalização que poderá ser utilizada para diversas tags,
+        </p>
+        
+        <h2>Aplicando Conceito</h2>
+        <p class="indentacao">
+            Para utilizar uma class, antes temos de criar a class nas CSS para então, incorporar no HTML5, vejamos:
+        </p>
+        <pre>
+            <code>
+        .sem-serifa{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .azul{
+            color: blue;
+        }
+        .verde{
+            font-weight: bold;
+        }
+            </code>
+        </pre>
+        <div>
+            <p>
+                . em CSS = class em HTML5
+            </p>
+            
+            <p class="azul">
+                Aqui vemos a utilização da class azul
+            </p>
+            <p class="peso">
+                Aqui vemos a utilização da class peso
+            </p>
+            <p class="sem-serifa">
+                Aqui vemos a utilização da class sem-serifa
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por Johnny</p>
+    </footer>
+</body>
+</html>

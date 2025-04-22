@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Classes: Uma forma de organizar uma determinada configuração para o design das CSS, podendo utilizar em diversas tags do HTML5. */
+.esquerda{
+    text-align: left;
+}
+
+.direita{
+    text-align: right;
+}
+
+.centro{
+    text-align: center;
+}
+
+.justificado{
+    text-align: justify;
+}

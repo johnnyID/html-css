@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Imagens Adaptáveis</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <center>
+        <h1>
+            Imagem dinâmica
+        </h1>
+    </center>
+
+    <p>
+        imagem que se ajusta de acordo com o tamanho da tela do usuário. 
+    </p>
+
+    <picture>
+        <source media="(max-width: 725px)" srcset="./paisagem-p.png">
+        <source media="(max-width: 1025px)" srcset="paisagem-m.png">
+        <img src="./paisagem-g.png" alt="imagem flexível">
+    </picture>
+
+    <p style="text-align: center;">
+        <a href="../home-page.html" target="_self" rel="previous"><img src="./voltar.png" alt="Seta para esquerda indicando o retorno para página principal" width="50"></a>
+    </p>
+
+</body>
+</html>
