@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        div.quadrado{
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Plano de fundo sem repetição */
+        div#q1{
+            /* Aplicando imagem de fundo */
+            background-image: url(imagens/pattern001.png);
+            /* Aplicação sem repetição */
+            background-repeat: no-repeat;
+        }
+
+        /* Plano de fundo sem repetição com posicionamento alterável */
+        div#q2{
+            /* Aplicando imagem de fundo */
+            background-image: url(imagens/pattern001.png);
+            /* Aplicação sem repetição */
+            background-repeat: no-repeat;
+            /* Alterando a posição. A posição pode ser personalizada utilizando algumas palavras chaves como: top, right, bottom e left, ou então pode ser personalizada de acordo com os pixels, porcentagens e etc... Como padrão, a posição inicial é no canto superior esquerdo. */
+            background-position: center;
+        }
+
+        /* Plano de fundo com repetição no eixo x e posicionamento alterável */
+        div#q3{
+            /* Aplicando imagem de fundo */
+            background-image: url(imagens/pattern001.png);
+            /* Aplicação com repetição horizontal/eixo x */
+            background-repeat: repeat-x;
+            /* Alterando a posição */
+            background-position: bottom;
+        }
+
+        /* Plano de fundo com repetição no eixo y e posicionamento alterável */
+        div#q4{
+            /* Aplicando imagem de fundo */
+            background-image: url(imagens/pattern001.png);
+            /* Aplicação com repetição vertical/eixo y */
+            background-repeat: repeat-y;
+            /* Alterando a posição */
+            background-position: right;
+        }
+
+        /* Plano de fundo com tamanho personalizado */
+        div#q5{
+            /* Aplicando imagem de fundo */
+            background-image: url(imagens/pattern001.png);
+            /* Aplicação de repetição */
+            background-repeat: no-repeat;
+            /* Aplicação de posicionamento */
+            background-position: 50%;
+            /* Personalizando o tamanho da imagem de fundo */
+            background-size: 50%;
+        }
+    </style>
+    <title>teste de Personalização</title>
+</head>
+<body>
+    
+    <div class="quadrado" id="q1">
+
+    </div>
+
+    <div class="quadrado" id="q2">
+
+    </div>
+
+    <div class="quadrado" id="q3">
+
+    </div>
+
+    <div class="quadrado" id="q4">
+
+    </div>
+
+    <div class="quadrado" id="q5">
+
+    </div>
+
+    <div class="quadrado" id="q6">
+
+    </div>
+</body>
+</html>
