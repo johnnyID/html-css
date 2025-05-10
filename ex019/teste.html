@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div.quadrado{
+            position: relative;
+            width: 600px;
+            height: 600px;
+            border: 4px solid black;
+            margin: 15vh;
+        }
+
+        div.q{
+            position: absolute;
+            width: 33.4%;
+            height: 33%;
+        }
+
+        div#q1{
+            background-color: red;
+            top: 67%;
+            transition: all 1s ease;
+        }
+
+        div#q2{
+            background-color: green ;
+            top: 67%;
+            left: 33.5%;
+            transition: all 1s ease;
+        }
+        
+        div#q3{
+            background-color: blue;
+            top: 67%;
+            left: 67%;
+            transition: all 1s ease;
+        }
+        
+        div#q1:hover{
+            top: 55%;
+            border-radius: 50%;
+        }
+
+        div#q2:hover{
+            top: 55%;
+            border-radius: 50%;
+        }
+
+        div#q3:hover{
+            top: 55%;
+            border-radius: 50%;
+        }
+
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="quadrado">
+        <div class="q" id="q1"></div>
+        <div class="q" id="q2"></div>
+        <div class="q" id="q3"></div>
+    </div>
+</body>
+</html>
