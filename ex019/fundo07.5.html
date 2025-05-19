@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comportamento do fundo de imagem rolável</title>
+    <style>
+        div.fun1{
+            display: inline-block;
+            overflow: auto;
+            width: 300px;
+            height: 300px;
+            background: black url("imagens/wallpaper003.jpg") center center no-repeat;
+            background-size: cover;
+        }
+        div#fundo1{
+            /* A declaração background-attachment está relacionada com o comportamento de rolagem da imagem de fundo, podendo ser [fixed] -> Fixo em relação à viewport, [scroll] -> Fixo em relação ao elemento, e [local] -> Se move junto ao conteúdo rolável do elemento */
+            background-attachment: scroll;
+        }
+
+        div#fundo2{
+            /* A declaração background-attachment está relacionada com o comportamento de rolagem da imagem de fundo, podendo ser [fixed] -> Fixo em relação à viewport, [scroll] -> Fixo em relação ao elemento, e [local] -> Se move junto ao conteúdo rolável do elemento */
+            background-attachment: fixed;
+        }
+
+        div#fundo3{
+            /* A declaração background-attachment está relacionada com o comportamento de rolagem da imagem de fundo, podendo ser [fixed] -> Fixo em relação à viewport, [scroll] -> Fixo em relação ao elemento, e [local] -> Se move junto ao conteúdo rolável do elemento */
+            background-attachment: local;
+        }
+        
+        div p{
+            height: 600px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="fun1" id="fundo1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit eaque, corrupti dolore porro dolor voluptas, aspernatur qui quidem ullam veniam blanditiis quas, omnis placeat eveniet rerum fugit? Omnis, expedita!</p>
+    </div>
+    <div class="fun1" id="fundo2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit eaque, corrupti dolore porro dolor voluptas, aspernatur qui quidem ullam veniam blanditiis quas, omnis placeat eveniet rerum fugit? Omnis, expedita!</p>
+    </div>
+    <div class="fun1" id="fundo3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit eaque, corrupti dolore porro dolor voluptas, aspernatur qui quidem ullam veniam blanditiis quas, omnis placeat eveniet rerum fugit? Omnis, expedita!</p>
+    </div>
+</body>
+</html>

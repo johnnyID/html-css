@@ -8,15 +8,26 @@
 
         body{
             height: 98vh;
+            /* Sem uso de short-hand: 
             background-color: black;
             background-image: url("imagens/wallpaper003.jpg");
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
-            /* Shorthand da propriedade [background]:
-            color > image> position > repeat > size > 
+            background-attachment: fixed;
             */
+
+            /* Shorthand da propriedade [background]:
+            color > image> position > repeat > [size] > attachment
+            Obs: A propriedade [size] no short-hand não está funcionando, contudo podemos utilizar de maneira separada.
+            */
+
+            /* Com uso de short-hand */
+            background: black url(imagens/wallpaper003.jpg) center center no-repeat fixed;
+            background-size: cover;
+            font-family:  'Courier New', Courier, monospace;
         }
+
 
     </style>
 </head>

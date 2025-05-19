@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+    <style>
+        body{
+            position: relative;
+            height: 98vh;
+            background: purple url("imagens/target001.png") center center no-repeat fixed;
+            background-size: cover;
+        }
+
+        div{
+            /* [position absolute] permite ter precisão absoluta da posição de algum elemento, alterando as posições [top], [right], [bottom] e [left] com diversos valores, podendo ser [px, em, rem, %, etc...]. Para fazer uso legal da [position: absolute], o elemento deve estar contido em um outro elemento com [position: relative] */
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background: yellow url("imagens/target001.png") center center no-repeat scroll;
+            background-size: cover;
+            
+            /* Alterando a posição [top] -> distância do elemento em relação ao topo do site */
+            top: 50%;
+            
+            /* Alterando a posição [left] -> distância do elemento em relação ao lado esquerdo do site */
+            left: 50%;
+
+            /* Modificando outras posições com a propriedade [transform] e sua função [translate()] que permite movimentar o elemento da mesma forma que o anterior, possibilitando mais 2 movimentos no eixo x e y */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+</body>
+</html>
