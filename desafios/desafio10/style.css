@@ -65,6 +65,7 @@ section.normal > p{
 section.imagem{
     background: white url("imagens/background001.jpg") top center no-repeat fixed;
     background-size: cover;
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.375);
 }
 
 section#img1{
