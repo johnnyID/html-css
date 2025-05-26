@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/* 
+    Código copiado linha a linha do Gustavo Guanabara do Curso em Vídeo.
+    
+    Obs: Com alguns acréscimos, sendo eles: comentários.
+*/
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Passion One", cursive;
+    --fonte3: "Sriracha", cursive;
+}
+
+/* Configurações globais */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+/* Personalização do corpo da página */
+html, body{
+    min-height: 100vh;
+    background-color: darkgrey;
+    font-family: var(--fonte1);
+}
+
+/* Personalização do  cabeçalho*/
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Personalizando o título do cabeçalho */
+header > h1{
+    padding-top: 50px;
+    /* Transforma todas as letras em maiúsculas, porém as primeiras letras são maiores que as demais. */
+    font-family: var(--fonte2);
+    font-variant: small-caps;
+    /* O tamanho da fonte diminui/aumenta de acordo com o tamanho da largura da viewport-width(largura do dispositivo)  */
+    font-size: 10vw;
+}
+
+/* Personalizando o parágrafo do cabeçalho */
+header > p{
+    padding-bottom: 50px;
+}
+
+/* Personalizando o link do cabeçalho e do roda-pé*/
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* Personalização do link ao passar o mouse por cima/clicar. */
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+/* Personalizando todas as seções */
+section{
+    /* Padding responsivo com relação à view-height, 10vh = 10% da view-height */
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+/* Personalizando a seção com a classe normal, onde não será utilizado nenhuma imagem de fundo para o conteúdo. */
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+/* Personalizando a seção com a classe imagem, onde será utilizado imagens como plano de fundo conteúdo. */
+section.imagem{
+    background-color: rgb(61, 61, 61);
+    color: white;
+    box-shadow: inset 0px 0px 13px 4px rgba(0, 0, 0, 0.242);
+}
+
+/* Inserindo imagem  na segunda seção de imagem */
+section#img1{
+    background: url(imagens/pexels-chuck-3728086.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Inserindo imagem na segunda seção de imagem */
+section#img2{
+    background: url(imagens/pexels-simple-soul-photogrphy-1100392298-27135722.jpg) no-repeat 5% 25% fixed;
+    background-size: cover;
+}
+
+section.imagem > p{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.363);
+    text-shadow: 1px 1px 0px black;
+}
+
+/* Personalizando o roda-pé. */
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
