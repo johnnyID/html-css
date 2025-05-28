@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Mesclagem</title>
+    <style>
+        table{
+            width: 300px;
+            border-collapse: collapse;
+        }
+
+        td{
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Uso de Mesclagem</h1>
+    <h2>colspan e rowspan</h2>
+    <table>
+        <!-- Para mesclar um índice da tabela em mais espaço caso tenha um espaço vazio, basta utilizarmos "colspan" para ocupar duas ou mais colunas e "rowspan" para ocupar duas ou mais linhas. -->
+        <tr>
+            <!-- Utilizando "colspan" para o índice A ocupar 2 colunas, a coluna do meio e a coluna à esquerda -->
+            <td colspan="2">A</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>E</td>
+            <!-- Utilizando "rowspan" para o índice F ocupar 2 linhas da mesma coluna. -->
+            <td rowspan="2">F</td>
+        </tr>
+        <tr>
+            <!-- Utilizando "colspan" para o índice H ocupar 2 colunas, a coluna do meio e a coluna à esquerda. -->
+            <td colspan="2">H</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -5,32 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas Grandes</title>
     <style> 
+
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
 
         table{
+            position: relative;
             width: 500px;
             border-collapse: collapse;
         }
 
+        thead > tr > th{
+            /* "position: sticky;" junto ao container com "position: relative;" faz um elemento "grudar" na tela ao atingir uma posição de rolagem da tela.*/
+            position: sticky;
+            /* Modifica a distância que precisa para grudar na tela*/
+            top: -1px;
+            background-color: #383838;
+        }
+
         thead, tfoot{
-            background-color: grey;
+            background-color: #383838;
             color: white;
+        }
+        
+
+        /* Utilizando a pseudo-class "nth-child(índice), selecionamos elementos de acordo com sua posição dentro de um container pai.
+        Podemos passar alguns valores como parâmetro da pseudo-class, sendo eles:
+        Um números: ":nth-child(3)" seleciona o terceiro filho de seu pai. 
+        Uma fórmula: ":nth-child(3n)" seleciona o filho em posições de 3 em 3 casas.
+        Uma expressão mais complexa: ":nth-child(2n+1)" seleciona todos os filhos em posições ímpares.
+         */
+        tbody > tr:nth-of-type(2n){
+            background-color: lightgrey;
+        }
+
+        caption{
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 4px;
         }
 
         td, th{
             border: 1px solid black;
         }
 
+        td.posicao{
+            text-align: center;
+        }
+
         td.num{
             text-align: right;
         }
 
-        th.space{
-            padding: 6px;
-        }
-
+        
     </style>
 </head>
 <body>
@@ -38,6 +66,7 @@
 
     <!-- Tabelas Grandes são compostas por uma estrutura semântica divididas em 3 partes da tabela, sendo a estrutura:
     TABLE = TABELA
+        CAPTION = LEGENDA DA TABELA
         THEAD = CABEÇA DA TABELA
             TR = LINHA DA TABELA
                 TH = CABEÇALHO DA TABELA
@@ -52,153 +81,155 @@
                 TD = DADO DA TABELA-->
 
     <table>
+        <caption>População das Unidades Federativas do Brasil</caption>
         <thead>
             <tr>
-                <th></th>
-                <th class="space">Unidade Federativa</th>
-                <th class="space">População</th>
+                <!-- "scope" é uma especificação para o sistema de busca do google, onde será feita uma análise coerente dos dados. [ col, colgroup ] para as colunas e [ row, rowgroup] para as linhas-->
+                <th scope="col" style="width: 65px;">posição</th>
+                <th scope="col">Unidade Federativa</th>
+                <th scope="col" style="width: 110px;">População</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
+                <td class="posicao">1</td>
                 <td>São Paulo</td>
                 <td class="num">45 973 194</td>
             </tr>
             <tr>
-                <td>2</td>
+                <td class="posicao">2</td>
                 <td>Minas Gerais</td>
                 <td class="num">21 322 691</td>
             </tr>
             <tr>
-                <td>3</td>
+                <td class="posicao">3</td>
                 <td>Rio de Janeiro</td>
                 <td class="num">17 219 679</td>
             </tr>
             <tr>
-                <td>4</td>
+                <td class="posicao">4</td>
                 <td>Bahia</td>
                 <td class="num">14 850 513</td>
             </tr>
             <tr>
-                <td>5</td>
+                <td class="posicao">5</td>
                 <td> Paraná</td>
                 <td class="num">11 824 665</td>
             </tr>
             <tr>
-                <td>6</td>
+                <td class="posicao">6</td>
                 <td>Rio grande do Sul</td>
                 <td class="num">11 229 915</td>
             </tr>
             <tr>
-                <td>7</td>
+                <td class="posicao">7</td>
                 <td>Pernambuco</td>
                 <td class="num">9 539 029</td>
             </tr>
             <tr>
-                <td>8</td>
+                <td class="posicao">8</td>
                 <td>Ceará</td>
                 <td class="num">9 233 656</td>
             </tr>
             <tr>
-                <td>9</td>
+                <td class="posicao">9</td>
                 <td>Pará</td>
                 <td class="num">8 664 306</td>
             </tr>
             <tr>
-                <td>10</td>
+                <td class="posicao">10</td>
                 <td>Santa Catarina</td>
                 <td class="num">8 058 441</td>
             </tr>
             <tr>
-                <td>11</td>
+                <td class="posicao">11</td>
                 <td>Goiás</td>
                 <td class="num">7 350 483</td>
             </tr>
             <tr>
-                <td>12</td>
+                <td class="posicao">12</td>
                 <td>Maranhão</td>
                 <td class="num">7 010 960</td>
             </tr>
             <tr>
-                <td>13</td>
+                <td class="posicao">13</td>
                 <td>Amazonas</td>
                 <td class="num">4 281 209</td>
             </tr>
             <tr>
-                <td>14</td>
+                <td class="posicao">14</td>
                 <td>Paraíba</td>
                 <td class="num">4 145 040</td>
             </tr>
             <tr>
-                <td>15</td>
+                <td class="posicao">15</td>
                 <td>Espírito Santo</td>
                 <td class="num">4 102 129</td>
             </tr>
             <tr>
-                <td>16</td>
+                <td class="posicao">16</td>
                 <td>Mato Grosso</td>
                 <td class="num">3 836 399</td>
             </tr>
             <tr>
-                <td>17</td>
+                <td class="posicao">17</td>
                 <td>Rio Grande do Norte</td>
                 <td class="num">3 446 071</td>
             </tr>
             <tr>
-                <td>18</td>
+                <td class="posicao">18</td>
                 <td>Piauí</td>
                 <td class="num">3 375 646</td>
             </tr>
             <tr>
-                <td>19</td>
+                <td class="posicao">19</td>
                 <td>Alagoas</td>
                 <td class="num">3 220 104</td>
             </tr>
             <tr>
-                <td>20</td>
+                <td class="posicao">20</td>
                 <td>Distrito Federal</td>
                 <td class="num">2 982 818</td>
             </tr>
             <tr>
-                <td>21</td>
+                <td class="posicao">21</td>
                 <td>Mato Grosso do Sul</td>
                 <td class="num">2 901 895</td>
             </tr>
             <tr>
-                <td>22</td>
+                <td class="posicao">22</td>
                 <td>Sergipe</td>
                 <td class="num">2 291 077</td>
             </tr>
             <tr>
-                <td>23</td>
+                <td class="posicao">23</td>
                 <td>Rondônia</td>
                 <td class="num">1 746 227</td>
             </tr>
             <tr>
-                <td>24</td>
+                <td class="posicao">24</td>
                 <td>Tocantins</td>
                 <td class="num">1 577 342</td>
             </tr>
             <tr>
-                <td>25</td>
+                <td class="posicao">25</td>
                 <td>Acre</td>
                 <td class="num">880 631</td>
             </tr>
             <tr>
-                <td>26</td>
+                <td class="posicao">26</td>
                 <td>Amapá</td>
                 <td class="num">802 837</td>
             </tr>
             <tr>
-                <td>27</td>
+                <td class="posicao">27</td>
                 <td>Roraima</td>
                 <td class="num">716 793</td>
             </tr>
         </tbody>
         <tfoot>
-            <th>-</th>
-            <th>População Total</th>
+            <td style="text-align: center;">-</td>
+            <th scope="row">População Total</th>
             <td class="num"><strong>212 583 750</strong></td>
         </tfoot>
     </table>
