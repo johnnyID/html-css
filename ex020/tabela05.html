@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            margin: auto;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        h1, h2, caption{
+            padding: 10px;
+            text-align: center;
+        }
+
+        caption{
+            font-size: 1.3em;
+        }
+
+        td, th{
+            border: 1.4px solid black;
+        }
+
+        col.cnome{
+            background-color: aqua;
+        }
+
+        col.cgrupo{
+            background-color: aquamarine;
+        }
+
+        col.cidade{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercícios de Tabelas</h1>
+    <h2>Uso de Tag colgroup</h2>
+    <table>
+        <!-- Tag [ colgroup ] junto à tag [ col ] agrupa todas as colunas, podendo personaliza-las de forma individual cada uma. -->
+        <colgroup>
+            <col class="cnome">
+            <!-- A tag [ col ] com a configuração [ span="2"] compartilha sua personalização com uma coluna à sua direita. O valor dentro de span indica quantas colunas à sua direita serão afetadas.-->
+            <col class="cgrupo" span="2">
+            <col class="cidade">
+        </colgroup>
+        <caption>
+            Cadastro
+        </caption>
+        <tr>
+            <th>Nome</th>
+            <th>Sexo</th>
+            <th>Idade</th>
+            <th>Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Beatriz</td>
+            <td>F</td>
+            <td>19</td>
+            <td>Programadora</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>M</td>
+            <td>30</td>
+            <td>Engenheiro</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>25</td>
+            <td>Médico</td>
+        </tr>
+        <tr>
+            <td>Otávio</td>
+            <td>M</td>
+            <td>45</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>23</td>
+            <td>Nutricionista</td>
+        </tr>
+    </table>
+</body>
+</html>
