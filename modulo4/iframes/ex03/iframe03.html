@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    iframe{
+        width: 95vw;
+        height: 400px;
+        border: 1px solid black;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Faça sua escolha</h1>
+    
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore obcaecati sit, excepturi expedita cum tempora esse rerum quod, error a natus ab nostrum labore. Hic error doloremque omnis velit cum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse adipisci, blanditiis error eos veritatis magni reiciendis natus dolore rem ad at animi cupiditate quia alias ipsam quos laborum minima vero!</p>
+
+    <ul>
+        <!-- Utilizando o identificador de destino [ frame ] criado para o iframe no atributo [ target="frame"] dos links, os mesmos serão carregados dentro do iframe. -->
+        <li><a href="../paginas-extras/page01.html" target="frame">Primeira Página</a></li>
+        <li><a href="../paginas-extras/page02.html" target="frame">Segunda Página</a></li>
+        <li><a href="../paginas-extras/page03.html" target="frame">Terceira Página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eligendi delectus quo nobis nesciunt consequatur facilis quibusdam at repudiandae quam reiciendis aperiam, tempora perferendis modi corrupti voluptates, excepturi, vitae doloremque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quo perferendis recusandae tempora maiores incidunt praesentium minus sit necessitatibus sequi unde
+    </p>
+
+    <!-- O atributo [ name="nome-do-iframe" ] é um identificador de destino [ target ] para links, ou seja, ao aplicar um [ name="nome-do-iframe" ] podemos jogar esse nome para o atributo [ target="name" ] do link, para que ao clicar no mesmo, a página de destino seja carregada dentro do iframe. -->
+    <iframe name="frame" srcdoc="<h2>Uso do atributo [ srcdoc='']</h2><p>[ srcdoc='' ] possibilita colocarmos elementos HTML dentro, sem precisar criar outro arquivo HTML e trazermos para cá com o atributo [ src='caminho-do-arquivo']. Apesar de funcionar bem, a legibilidade do código fica um pouco comprometida, pois os elementos ficam muito juntos um do outro.</p><p>A melhor opção é encaminhar outro arquivo HTML para cá, preservando a legibilidade e manutenção do mesmo.</p>" >
+        <!-- Este parágrafo será exibido caso o navegador não seja compatível com o iframe -->
+        <p>
+            Seu navegador não é compatível com isso.
+        </p>
+
+    </iframe>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia consequatur nemo deleniti possimus dicta esse delectus ducimus consequuntur suscipit repudiandae facere eveniet debitis, iusto veniam in ipsam aspernatur aliquam. Illo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat a repellendus unde, possimus nihil nesciunt facere quo quae in provident rerum fugit, voluptatum labore! Assumenda veritatis deleniti accusamus ut! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium odio saepe, cupiditate esse natus id hic minus nisi minima. Autem sit repudiandae reprehenderit provident dolore fugit cumque quae rem?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum est perspiciatis ratione. Ex magni libero ad officia rerum! Dolor soluta obcaecati praesentium perferendis culpa sint labore voluptatum pariatur, veniam sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quidem excepturi itaque non eius consectetur unde, nesciunt sunt porro fugit, tempora hic vero provident doloremque nemo esse cum similique adipisci? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, perferendis doloremque velit veritatis at iusto labore! Doloremque qui maiores, quisquam vel aut eaque vitae ducimus cum voluptatum voluptatibus libero dolorum.
+    </p>
+</body>
+</html>
