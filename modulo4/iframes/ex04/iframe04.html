@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança com iframe</title>
+</head>
+<body>
+    <h1>Política de Referência [referrerpolicy=" "] e SandBox [sandbox=" "]</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere impedit laboriosam repellendus magni nobis est nostrum asperiores tempora, provident dolorem exercitationem iure hic, autem iste ipsum modi nam deserunt!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nobis hic et consequuntur excepturi enim dignissimos blanditiis iusto laboriosam numquam, explicabo quas sequi dolorum facilis eveniet minima earum! Aliquam, quam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ad voluptatum porro asperiores quasi dolorum ab sequi alias, nobis et, sint maxime eos est odit repellendus laudantium tempora consequatur soluta!
+    </p>
+    <!-- Para segurança do envio de dados da URL do seu site para terceiros, utilizamos dois atributos, sendo eles:
+    [ sandbox="" ] -> Restringe as interações com o site requisitado. Controlamos as interações utilizando alguns valores que permite acesso à algumas ações. 
+    [ referrerpolicy=""] -> Restringe o envio de alguns dados da URL, ou a própria URL. O site vai decidir se envia a URL como parte do cabeçalho "referer" para terceiros após a requisição. -->
+    <iframe src="../paginas-extras/page04.html" frameborder="1" sandbox="sandbox" referrerpolicy="no-referrer">
+        <p>
+            Infelizmente seu site não é compatível!
+        </p>
+    </iframe>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, iste numquam aliquam, sapiente non quam natus aspernatur, placeat nam consequuntur incidunt tempore pariatur mollitia ea. Odio corporis eum accusantium minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ipsum rem iusto tenetur necessitatibus incidunt deleniti, commodi delectus mollitia nihil eos officia nesciunt qui itaque illum a quo assumenda quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nam dolorem adipisci quidem repellat ipsum, architecto voluptate molestiae quam. Temporibus reiciendis cumque harum et laboriosam veritatis id iure quo pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repudiandae nisi nostrum eligendi earum distinctio molestiae eum animi adipisci eveniet reiciendis ipsa voluptate iure, laborum necessitatibus repellendus explicabo nam minima? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab est, natus libero laudantium modi officiis alias delectus. Vero autem maiores consequuntur, ea alias, aspernatur enim beatae veritatis corporis voluptatum minima!
+    </p>
+</body>
+</html>
