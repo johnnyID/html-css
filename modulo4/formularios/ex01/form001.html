@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Meu primeiro Formulário</h1>
+    <!-- Formulários são estruturas de entrada e envio de dados dos usuários. -->
+    
+    <!-- Formulários possui alguns atributos, sendo eles
+    
+    [ autocomplete="on" ou autocomplete="off" ] que possibilita o uso uma caixa de ajuda rápida para textos salvos.
+    
+    [ action="arquivo-da-linguagem" ] direciona os dados coletados para uma linguagem de programação. -->
+    <form action="cadastro.php" autocomplete="off">
+        <p>
+            <!-- A tag [ label ] serve para correlacionar um texto descritivo a um campo de entrada de dados -->
+            <label for="inome">Nome:</label>
+            <!-- A tag [ input ] são caixas de entrada, onde serão preenchidos com os dados do usuário. Alguns atributos modifica o [ input ] podendo transforma-lo em um botão que envia os dados, ao invés de receber os dados.-->
+            <input type="text" name="nome" id="inome"></p>
+        <p>
+            <label for="isobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

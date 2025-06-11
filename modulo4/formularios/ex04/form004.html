@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number, month, date e time</title>
+</head>
+<body>
+    <h1>Mais alguns elementos do formulário</h1>
+    <form action="arquivo.js" method="get" autocomplete="on">
+        <!-- Atributos das caixas de entrada de dados
+        
+        [ min="número-mínimo" ] -> Determina o número mínimo que podemos começar.
+    
+        [ max="número-máximo" ] -> Determina o número máximo que pode ser atingido.
+    
+        [ step="número-acrescentado" ] -> Determina o quanto será acrescentado, podendo ser por exemplo, de 1 em 1 ou 0,5 em 0,5...
+    
+        [ value="insere-um-valor-inicial" ] -> Insere um valor inicial pro usuário
+    
+        -->
+        <p>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required minlength="8" size="30" placeholder="Nome Completo" autocomplete="name">
+        </p>
+        <p>
+            <label for="media">Média:</label>
+            <input type="number" name="media" id="media" value="5" min="0" max="10" step="0.1" placeholder="Média" required>
+        </p>
+        <p>
+            <label for="mes">Período Letivo:</label>
+            <input type="month" name="mes" id="mes" value="2025-08" required>
+        </p>
+        <p>
+            <label for="dia">Data da Prova:</label>
+            <input type="date" name="dia" id="dia" value="2025-08-23" required>
+        </p>
+        <p>
+            <label for="horario">Horário da Prova:</label>
+            <input type="time" name="horario" id="horario" value="09:30" required>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

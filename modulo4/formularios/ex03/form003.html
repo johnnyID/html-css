@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Entrada Text e Password</title>
+</head>
+<body>
+    <!-- Atributos do formulário
+    
+    [ autocomplete="on" ou autocomplete="off" ] que possibilita o uso uma caixa de ajuda rápida para textos salvos.
+
+    [ action="arquivo-da-linguagem" ] direciona os dados coletados para uma linguagem de programação.
+
+    [ method="get" ] -> Os dados preenchidos no formulário são visíveis na URL do navegador. Valor padrão.
+
+    [ method="post" ] -> Os dados preenchidos no formulário não são visíveis na URL do navegador. Utilizado para omitir dados sensíveis e evitar ligeiramente vazamentos de dados por meio da exibição dos dados na URL do navegador.
+    -->
+    <form action="arquivo.js" method="post" autocomplete="off">
+        <p>
+            <label for="nome">Nome:</label>
+            <!-- 
+            Atributos das caixas de entrada de dados
+            
+            [ required ] -> Determina que o campo deve ser preenchido para que os dados sejam enviados, do contrário aparecerá uma mensagem alertando o usuário.
+
+            [ minlength="número-mínimo" ] -> Determina o número mínimo de caracteres que o usuário deve digitar.
+
+            [ maxlength="número-máximo" ] -> Determina o número máximo de caracteres que o usuário pode digitar.
+
+            [ size="tamanho-do-campo" ] -> Determina o tamanho da caixa de entrada de dados.
+
+            [ placeholder] -> Insere previamente uma mensagem dentro da caixa de entrada de dados, indicando o que deve ser inserido para o usuário.
+
+            [ autocomplete="tipo-de-dado-salvo" ] -> Permite ter ajuda rápida de dados salvos pelo navegador, podendo ser nome do usuário, nova senha, senha atual, email... 
+            -->
+            <input type="text" name="nome" id="nome" required minlength="8" maxlength="20" size="12" placeholder="Nome do Usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" required minlength="8" size="12" placeholder="Senha do Usuário" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
