@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <!-- Atributos para formulários 
+    
+    [ checked ] -> Marca automaticamente uma caixa de marcação [ checkbox ]. Serve para [ checkbox ] e [ Radio ]
+
+    -->
+    <h1>Utilizando CheckBox e Radio</h1>
+    <form action="arquivo.js" method="get" autocomplete="off">
+
+        <fieldset>
+            <legend>Sexo</legend>
+            <!-- Utilizando o [ type="radio" ] com o atributo [ name="" ] com valor sendo diferente para duas ou mais marcações, o círculo de marcação ficará permanentemente ao clicar, não tendo alternância entre elas. Para evitar este problema, basta alterar o valor do atributo [ name="" ] para igual, assim poderá ter alternância entre os círculos de marcações. Funciona apenas o input do tipo [ type="radio" ]. -->
+            <input type="radio" name="sexo" id="masculino" value="M" checked> <label for="masculino">Masculino</label><br>
+
+            <input type="radio" name="sexo" id="feminino" value="F"> <label for="feminino">Feminino</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="futebol" id="futebol" checked> <label for="futebol">Futebol</label><br>
+
+            <input type="checkbox" name="basquete" id="basquete"> <label for="basquete">Basquete</label><br>
+
+            <input type="checkbox" name="tenis" id="tenis"> <label for="tenis">Tênis</label><br>
+
+            <input type="checkbox" name="ciclismo" id="ciclismo" checked> <label for="ciclismo">Ciclismo</label>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
