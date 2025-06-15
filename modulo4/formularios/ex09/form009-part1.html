@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Utilizando output</h1>
+    <h2>Exemplo com JavaScript</h2>
+
+    <form action="arquivo.js">
+        <p>
+            <label for="num1">Número 1:</label>
+            <!-- 
+            ? [ oninput="" ] É um atributo para script que funciona com entrada de dados. O usuário digita algo na caixa de entrada, e a partir do dado fornecido, podemos utilizar script para alguma ação.
+            -->
+            <input type="number" name="num1" id="num1" required min="1" max="50" oninput="soma.innerHTML = Number(num1.value) + Number(num2.value)">
+        </p>
+        <p>
+            <label for="num2">Número 2:</label>
+            <input type="number" name="num2" id="num2" required min="1" max="50" oninput="soma.innerHTML = Number(num1.value) + Number(num2.value)">
+        </p>
+        <p>
+            <label for="soma">Soma:</label>
+            <!-- 
+            ? A tag [ <output></output> ] é o oposto do input, ou seja, saída de dados. Algum resultado será gerado nele.
+            -->
+            <output name="soma" id="soma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

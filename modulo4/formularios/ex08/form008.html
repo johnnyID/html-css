@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Utilizando select, datalist e textarea</h1>
+    <form action="arquivo.js" method="post">
+
+        <p>
+            <label for="estado">Estado:</label>
+            <!-- 
+            ? A tag [ <select></select> ] cria uma caixa de seleção de valores 
+            -->
+            <select name="estado" id="estado">
+                <!-- 
+                ? A tag [ <option></option> ] são as opções de valores dentro da caixa de seleção
+                -->
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="AL">Alagoas</option>
+                <option value="PE">Pernambuco</option>
+                <option value="MA">Maranhão</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="jogos">Jogos:</label>
+            <select name="jogos" id="jogos">
+            <!--
+            ? A tag [ <optgroup></optgroup> ] cria grupos de opções dentro da caixa de seleção.
+
+            ! O atributo [ label="" ] diferente da tag, funciona para nomear um grupo de opções dentro da caixa de seleção.
+            -->
+                <optgroup label="Tiro">
+                    <option value="CS:GO">Counter Strike</option>
+                    <option value="COD">Call of Duty</option>
+                    <option value="BF4">Battlefield 4</option>
+                    <option value="Fortnite">Fortnite</option>
+                </optgroup>
+                <optgroup label="Esporte">
+                    <option value="FIFA">FIFA 22</option>
+                    <option value="RL">Rocket League</option>
+                    <option value="TH">Tony Hawk's</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="prof">Profissão:</label>
+            <input type="text" name="prof" id="prof" list="lstprof">
+            <!-- 
+            ? A tag [ datalist ] é parecido com select, porém com a diferença de atribuir valores, ao invés de apenas selecionar uma opção.
+            -->
+            <datalist id="lstprof">
+                <!-- 
+                ! O atributo [ value="" ] não precisa necessariamente ser utilizado, apenas será expresso na URL caso seja preenchido, do contrário, o valor expresso será o que está contido na tag [ <option></option> ].
+                -->
+                <option value="ADM">Administrador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+                <option>Engenheiro</option>
+                <option>Médico</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="msg">Mensagem:</label><br>
+            <!-- 
+            ? A tag [ <textarea></textarea> ] cria uma área de texto para que o usuário possa digitar o que quiser. Muito utilizado para contato, suporte e feedback
+
+            ! Igualmente o tipo [ type="file" ] do formulário, é recomendado utilizar o formulário com [ method="POST" ], pois o usuário pode digitar bastante, podendo assim, ter um aumento da memória, e o método [ method="GET" ] tem um limite de 3000 bytes.
+            -->
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Digite alguma mensagem..."></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

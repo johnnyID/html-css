@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Utilizando input do tipo: color, range e file</h1>
+
+    <form action="arquivo.js" method="post" autocomplete="off">
+        <p>
+            <label for="cor">Cor:</label>
+            <!--
+            * Utilizando o atributo [ value="" ] para definir a cor inicial 
+            -->
+            <input type="color" name="cor" id="cor" value="#00ff00">
+        </p>
+
+        <p>
+            <label for="satisfacao">Índice de satisfação:</label>
+            <!-- 
+            * Utilizando o atributo [ value="" ] para definir o valor inicial.
+
+            * Utilizando o atributo [ min="" ] para definir o valor mínimo que pode atingir.
+
+            * Utilizando o atributo [ max="" ] para definir o valor máximo que pode atingir.
+            -->
+            <input type="range" name="satisfacao" id="satisfacao" value="3" min="1" max="5">
+        </p>
+        
+        <p>
+            <label for="arquivo">Foto de perfil:</label>
+            <!-- 
+            ! Para o melhor uso input do tipo [ type="file" ], é recomendado utilizar o método [ method="POST" ] para arquivo maior de 3000 bytes.
+            -->
+            <input type="file" name="arquivo" id="arquivo">
+        </p>
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

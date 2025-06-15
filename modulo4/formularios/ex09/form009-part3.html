@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        h1, h2{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Utilizando output</h1>
+    <h2>Exemplo com JavaScript</h2>
+    <form action="arquivo.js">
+
+        <p>
+            <label for="ano">Ano de Nascimento:</label>
+            <input type="number" name="ano" id="ano" required min="1900" max="2025" value="2025" oninput="calcIdade();">
+        </p>
+
+        <p>
+            <label for="idade">Idade:</label>
+            <output id="idade">0</output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar" onclick="idade.innerHTML = Number(0);">
+        </p>
+    </form>
+    <script>
+        /**
+         * *Função que calcula a idade do usuário.
+        */
+        function calcIdade(){
+            let atual = new Date().getFullYear();
+            idade.innerHTML = Number(atual) - Number(ano.value);
+        };
+    </script>
+</body>
+</html>
