@@ -1,0 +1,42 @@
+
+/* 
+? Estilização para telas
+*/
+
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: lightgrey;
+}
+
+header > h1{
+    text-align: center;
+}
+
+nav > ul{
+    background-color: darkgrey;
+}
+
+nav > ul > li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+    background-color: grey;
+    color: white;
+}
+
+main{
+    width: 600px;
+    margin: auto;
+}
+
+main h2, main p{
+    margin: 10px;
+}
