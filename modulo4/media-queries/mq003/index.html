@@ -5,12 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <style>
-        /* 
-        
-        */
+
+        /* Exercício de Demonstração de como utilizar Media Query em apenas um arquivo, podendo ser com uma tag style, ou arquivo style. */
+
+        /* Configuração Gerais */
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        html, body{
+            width: 100vw;
+            height: 100vh;
+            background-color: #233eff;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        h1{
+            color: white;
+            text-shadow: 2px 2px 0px #15259b;
+            padding: 10px;
+        }
+
+        /* Configurações Retrato(portrait) */
+        @media screen and (orientation: portrait) {
+            body{
+                background-image: url("../imagens/cev-portrait.jpg");
+                background-position: center bottom;
+            }
+        }
+        /* Configurações Paisagem(landscape) */
+        @media screen and (orientation: landscape) {
+            body{
+                background-image: url("../imagens/cev-landscape.jpg");
+                background-position: left bottom;
+            }
+        }
     </style>
 </head>
 <body>
-    
+    <h1>Mude a Orientação do Seu Dispositivo</h1>
 </body>
 </html>

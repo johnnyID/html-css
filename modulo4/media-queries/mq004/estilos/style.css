@@ -1,0 +1,55 @@
+/* 
+? Versão Mobile First
+
+! Mobile First é uma técnica desenvolvida em 2009 para agilizar a estrutura de todas as medias queries, pois antes começava-se por dispositivos maiores até dispositivos menores, porém essa técnica vinha com problemas, até porque o desenvolvedor tinha que tirar alguns elementos para encaixar no dispositivos menores. Então via-se uma necessidade de uma nova técnica para resolver este problema, e foi então que veio o MOBILE FIRST, que como o próprio nome sugere, primeiro móvel ou móvel primeiro, o desenvolvedor começa a desenvolver primeiro para dispositivos móveis, e posteriormente vai escalando para dispositivos maiores, sem ter que tirar elementos, o que na verdade faz o contrário, adiciona mais elementos caso o desenvolvedor queira.
+*/
+
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    height: 100vh;
+}
+
+/* * corpo do site */
+body{
+    background: url("../../imagens/back-phone.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+/* * conteúdo principal */
+main{
+    background-color: rgba(255, 255, 255, 0.826);
+    width: 80vw;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* * título principal */
+h1{
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
+    text-align: center;
+    font-size: 2em;
+}
+
+/* * Imagens */
+img{
+    display: block;
+    margin: auto;
+}
+
+img#phone { display: block; }
+img#tablet { display: none; }
+img#print { display: none; }
+img#pc { display: none; }
+img#tv { display: none; }
