@@ -1,0 +1,27 @@
+/* 
+? Configurações Gerais
+*/
+
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Aqui temos uma gambiarra para que esta configuração funcione, pois utilizo do [ background-color: #233eff; ] para ofuscar o problema ocasionado pelo [ background-size: contain; ], porque o mesmo deixa laterais brancas visível quando aumentamos muito a tela para os lados, mas ao utilizar a mesma cor de fundo, tudo parece ser uma coisa sós. */
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #233eff;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h1{
+    color: white;
+    text-shadow: 2px 2px 0px #182697;
+    padding: 10px;
+}
