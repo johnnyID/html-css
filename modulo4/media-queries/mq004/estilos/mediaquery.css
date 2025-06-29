@@ -1,0 +1,75 @@
+/* 
+? Versão para diferentes telas
+
+! Typical Device BreakPoints
+----------------------------
+! Base padrão utilizado em alguns frameworks, e seguindo o Mobile First, e valores mínimos.
+* Celulares Grandes(paisagem) e pequenos tablets: A partir de 640px
+* Tablets(retrato): A partir de 768px
+* Tablets(paisagem) e pequenos laptops: A partir de 1024px
+* Laptops médios e desktops comuns: A partir de 1280px
+* Desktops grandes e Telas 4k: A partir de 1536px
+*/
+
+@charset "UTF-8";
+
+@media print { /* Impressora */
+    
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main{
+        border: 2px solid black;
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    main::after{
+        content: "Impressão criada por Johnny para o www.cursoemvideo.com";
+        text-decoration: overline;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: block; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 768px) { /* TABLET */
+    body{
+        background-image: url("../../imagens/back-tablet.jpg");
+    }
+    
+    img#phone { display: none; }
+    img#tablet { display: block; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 1024px) { /* Desktops */
+    body{
+        background-image: url("../../imagens/back-pc.jpg");
+    }
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: block; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 1280px) { /* TVs grandes */
+    body{
+        background-image: url("../../imagens/back-tv.jpg");
+    }
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: block; }
+}
