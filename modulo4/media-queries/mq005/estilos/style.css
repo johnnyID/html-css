@@ -8,11 +8,11 @@
 }
 
 body{
-    background-color: lightgray;
+    background-color: rgb(176, 176, 176);
 }
 
 header {
-    background-color: rgb(170, 169, 169);
+    background-color: rgb(130, 130, 130);
 }
 
 header > h1{
