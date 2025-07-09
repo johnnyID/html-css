@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+
+        div.container{
+            display: flex;
+            
+            background-color: lightsalmon;
+        }
+
+        div#cont1{
+            /* Direcionamento:
+
+            eixo principal [main-axis] = esquerda[início] para direita[fim].
+            
+            eixo transversal [cross-axis] = cima[início] para baixo[fim].
+            */
+            flex-direction: row;
+        }
+
+        div#cont2{
+            /* direcionamento:
+
+            eixo principal [main-axis] = direita[início] para esquerda[fim].
+
+            eixo transversal [cross-axis] = cima[início] para baixo[fim].
+            */
+            flex-direction: row-reverse;
+        }
+
+        div#cont3{
+            /* direcionamento
+            
+            eixo principal [main-axis] = cima[início] para baixo[fim].
+
+            eixo transversal [cross-axis] = esquerda[início] para direita[fim].
+            */
+            flex-direction: column;
+        }
+
+        div#cont4{
+            /* direcionamento
+            
+            eixo principal [main-axis] = baixo[início] para cima[fim].
+
+            eixo transversal [cross-axis] = esquerda[início] para direita[fim].
+            */
+            flex-direction: column-reverse;
+        }
+
+        div.item{
+            background-color: lightgray;
+            border: 1px solid black;
+
+            padding: 10px;
+            
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>FlexBox</h1>
+    <h2>Eixos (axis)</h2>
+    <p>
+        É bom destacar que a tecnologia flexbox possui direcionamentos verticais e horizontais, sendo eles: main-axis [eixo principal] e o cross-axis [eixo transversal].
+    </p>
+    <p>
+        É importante também saber visualizar onde se localizam os eixos, e para isso, temos que saber o direcionamento do container. Para personalizar o direcionamento, é utilizado a propriedade flex-direction, tendo 4 tipos de valores que podem ser atribuídos.
+    </p>
+    <p>
+        [ flex-direction: row; ] - Este é o valor padrão do flex-direction, em que os itens são alinhados da <strong>esquerda [main-start] à direita [main-end]</strong>, sendo o <strong>eixo horizontal como o eixo principal [main-axis]</strong> e de <strong>cima [cross-start] para baixo [cross-end]</strong> sendo o <strong>eixo transversal [cross-axis]</strong>.
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+        [ flex-direction: row-reverse; ] - Este é parecido com o row, porém com a <strong>diferença que o eixo principal inverte sua direção</strong>, onde os itens são alinhados da <strong>direita [main-start] à esquerda [main-end]</strong>. O eixo transversal continua igual.
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+        [ flex-direction: column; ] - Este <strong>inverte os eixos</strong>, onde o <strong>eixo principal [main-axis] se torna o eixo vertical</strong>, e o <strong>eixo transversal [cross-axis] se torna o eixo horizontal</strong>. O eixo principal [main-axis] tem seu <strong>alinhamento de cima [main-start] para baixo [main-end]</strong>, e o eixo transversal da <strong>esquerda [cross-start] à direita [cross-end]</strong>.
+    </p>
+    <div id="cont3" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <p>
+        [ flex-direction: column-reverse; ] - Este é o <strong>inverso do column</strong>, onde o <strong>eixo principal [main-axis] inverte sua direção</strong>, sendo <strong>alinhado de baixo [main-start] para cima [main-end]</strong>. O eixo transversal continua igual.
+    </p>
+    <div id="cont4" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.conteiner{
+            display: flex;
+            background-color: lightsalmon;
+            flex-direction: row-reverse;
+            margin: 10px;
+        }
+
+        div.item{
+            flex: auto;
+            background-color: lightgray;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h1, p{
+            margin: 5px;
+            padding: 5px;
+        }
+
+        p{
+            text-indent: 30px;
+            text-align: justify;
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <p>
+        Flexbox é uma forma de organizar os elementos contidos no container pai de forma fluida. Ao utilizar o <strong>display flex [ display: flex; ]</strong> no pai e <strong>flex auto [ flex: auto; ]</strong> no itens dentro do container pai, os mesmo se adaptarão de acordo com o posicionamento, largura, altura... O importante saber é que o display flex junto ao flex auto dos itens, os conteúdos se adaptam.
+    </p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+</body>
+</html>

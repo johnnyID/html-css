@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+
+        div.container{
+            display: flex;
+            
+            background-color: lightsteelblue;
+        }
+
+        div#cont1{
+            /* Quebra de Itens
+            
+            flex-wrap: nowrap; = sem quebra de itens/deslocamentos
+            */
+            flex-wrap: nowrap;
+        }
+
+        div#cont2{
+            /* Quebra de Itens 
+            
+            flex-wrap: wrap; = quebra os itens/deslocam-se na direção do eixo transversal.
+            */
+            flex-wrap: wrap;
+        }
+
+        div#cont3{
+            /* Quebra de Itens
+            
+            flex-wrap: wrap-reverse; = quebra os itens/deslocam-se na direção oposta do eixo transversal.
+            */
+            flex-wrap: wrap-reverse;
+        }
+
+        div.item{
+            
+
+            background-color: lightgrey;
+            border: 1px solid black;
+
+            text-align: center;
+
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>FlexBox</h1>
+    <h2>Quebra de itens/flex-wrap</h2>
+    <p>
+        A propriedade flex-wrap faz com que os itens quebrem/deslocam-se para a direção do eixo transversal ao comprimir o container.
+    </p>
+    <p>
+        [ flex-wrap: nowrap; ] - Valor padrão, onde os itens não quebram ao comprimir o container, apenas são espremidos.
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+    </div>
+    <p>
+        [ flex-wrap: wrap; ] - Ao comprimir o container, os itens quebram/deslocam-se na direção do eixo transversal.
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+    </div>
+    <p>
+        [ flex-wrap: wrap-reverse; ] - Ao comprimir o container, os itens quebram/deslocam-se na direção oposta do eixo transversal.
+    </p>
+    <div id="cont3" class="container">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+    </div>
+</body>
+</html>
