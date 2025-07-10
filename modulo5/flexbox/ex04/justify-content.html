@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        div.container{
+            display: flex;
+            flex-flow: row nowrap;
+
+            background-color: lightsalmon;
+        }
+        
+        div#cont1{
+            /* Alinhamento
+            
+            justify-content: flex-start; = itens alinham-se na borda inicial [main-start] do eixo principal [main-axis]
+            */
+            justify-content: flex-start;
+        }
+
+        div#cont2{
+            /* Alinhamento 
+            
+            justify-content: flex-end; = itens alinham-se na borda final [main-end] do eixo principal [main-axis]
+            */
+            justify-content: flex-end;
+        }
+
+        div#cont3{
+            /* Alinhamento 
+            
+            justify-content: center; = Centraliza os itens e criam-se espaços iguais nas bordas
+            */
+            justify-content: center;
+        }
+        
+        div#cont4{
+            /* Alinhamento 
+            
+            justify-content: space-between; = primeiro item alinha-se na borda inicial [main-start], o último na borda final [main-end], e cria-se espaços por entre cada item restante.
+            */
+            justify-content: space-between;
+        }
+
+        div#cont5{
+            /* Alinhamento
+            
+            justify-content: space-evenly; = Criam-se espaços iguais para cada item e cada borda do eixo principal, a borda inicial [main-start] e a borda final[main-end].
+            */
+            justify-content: space-evenly;
+        }
+
+        div#cont6{
+            /* Alinhamento 
+            
+            justify-content: space-around; = Criam-se espaços entre os itens, o espaço na borda inicial [main-start] e na borda final [main-end] são menores que os demais espaços distribuídos entre os itens.
+            */
+            justify-content: space-around;
+        }
+
+        div.item{
+            width: 60px;
+            padding: 10px;
+
+            background-color: lightgray;
+            border: 1px solid black;
+
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>FlexBox</h1>
+    <h2>Alinhamento dos itens nos eixos -- justify-content</h2>
+    <p>
+        A propriedade justify-content é utilizada para alinhar e organizar os itens dentro do container, sendo o justify-content para o eixo principal [main-axis]. Vejamos exemplos.
+    </p>
+    <p>
+        [ justify-content: flex-start; ] - Alinha os itens na borda <strong>inicial do eixo principal</strong>, o <strong>[main-start]</strong>. Valor padrão.
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+        [ justify-content: flex-end; ] - Alinha os itens na borda <strong>final do eixo principal</strong>, o <strong>[main-end]</strong>.
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+        [ justify-content: center; ] - <strong>Centraliza os itens</strong> e criam-se <strong>espaços iguais na borda inicial [main-start] e na borda final [main-end]</strong> do eixo principal [main-axis]
+    </p>
+    <div id="cont3" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+        [ Justify-content: space-between; ] - O primeiro item <strong>alinha-se na borda inicial [main-start]</strong>, o último item <strong>alinha-se na borda final [main-end]</strong> e cria-se <strong>espaços iguais entre cada item dentro do container</strong> 
+    </p>
+    <div id="cont4" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+        [ justify-content: space-evenly; ] - Criam-se <strong>espaços iguais para cada item</strong> dentro do container, tendo <strong>incluso o mesmo espaço na borda inicial [main-start] e na borda final [main-end]</strong> do eixo principal.
+    </p>
+    <div id="cont5" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+        [ justify-content: space-around; ] - Criam-se <strong>espaços entres os itens</strong>, o <strong>espaço na borda inicial [main-start] e na borda final [main-end] são menores que os demais espaços distribuídos entre os mesmos</strong>.
+    </p>
+    <div id="cont6" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+</body>
+</html>

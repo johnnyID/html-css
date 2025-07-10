@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+
+        div.container{
+            display: flex;
+            flex-flow: row nowrap;
+            height: 90px;
+
+            background-color: lightsalmon;
+        }
+
+        div#cont1{
+            /* Alinhamento
+            
+            align-items: stretch; = Os itens se alinham à altura do container, criando um efeito de esticar. 
+            */
+            align-items: stretch;
+        }
+
+        div#cont2{
+            /* Alinhamento
+            
+            align-items: flex-start; = Os itens alinham-se na borda inicial [cross-start] do eixo transversal [cross-axis].
+            */
+            align-items: flex-start;
+        }
+
+        div#cont3{
+            /* Alinhamento
+            
+            align-itens: center; = Os itens alinham-se no centro do container, criando espaços nas bordas [cross-start e cross-end] do eixo transversal [cross-axis]
+            */
+            align-items: center;
+        }
+
+        div#cont4{
+            /* Alinhamento
+            
+            align-items: flex-end; = Os itens alinham-se na borda final [cross-end] do eixo transversal [cross-axis].
+            */
+            align-items: flex-end;
+        }
+
+
+        div.item{
+            width: 60px;
+            padding: 10px;
+
+            background-color: lightgray;
+            border: 1px solid black;
+
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>FlexBox</h1>
+    <h2>Alinhamento dos Itens nos Eixos -- align-items</h2>
+    <p>
+        A propriedade align-items é utilizado para alinhar e organizar os itens dentro do container, sendo o align-items para o eixo transversal [cross-axis]. Vejamos exemplos.
+    </p>
+    <p>
+        [ align-items: stretch; ] - Os itens alinham-se à altura do container, criando um efeito de esticar. Valor padrão.
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+        [ align-items: flex-start; ] - Os itens alinham-se na borda inicial [cross-start] do eixo transversal.
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+        [ align-items: center; ] - Os itens alinham-se no centro do container, criando espaços nas bordas [cross-start e cross-end] do eixo transversal [cross-axis].
+    </p>
+    <div id="cont3" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+        [ align-items: flex-end; ] - Os itens alinham-se na borda final [cross-end] do eixo transversal [cross-axis].
+    </p>
+    <div id="cont4" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+</body>
+</html>
+
