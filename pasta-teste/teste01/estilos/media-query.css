@@ -10,7 +10,7 @@
 
     /* ? Estilizando o plano de fundo */
     body{
-        background: linear-gradient(to top, rgb(111, 253, 229), rgb(192, 0, 230)) fixed;
+        background: linear-gradient(to top, rgb(91, 207, 188), rgb(170, 0, 204)) fixed;
     }
 
     /* ? Configuração do layout */
@@ -52,7 +52,7 @@
 @media screen and (min-width: 992px) {
 
     body{
-        background: linear-gradient(to top, rgb(111, 253, 229), rgb(192, 0, 230)) fixed;
+        background: linear-gradient(to top, rgb(91, 207, 188), rgb(170, 0, 204)) fixed;
     }
 
     /* ? Configuração do layout */
