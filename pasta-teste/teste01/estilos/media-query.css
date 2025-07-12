@@ -60,7 +60,8 @@
         display: flex;
         flex-flow: row-reverse nowrap;
         
-        width: 65vw;
+        width: 85vw;
+        max-width: 992px;
         height: 350px;
     }
 
