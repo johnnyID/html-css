@@ -42,9 +42,11 @@
     /* ? Estilizando o botão[link] */
     main > section.login > div.form > form > a{
         height: 40px;
-        padding-top: 6px;
+        padding-bottom: 4px;
     }
 }
+
+
 
 /* ? EStilo para desktop+ */
 @media screen and (min-width: 992px) {
@@ -58,7 +60,7 @@
         display: flex;
         flex-flow: row-reverse nowrap;
         
-        width: 900px;
+        width: 86vw;
         height: 350px;
     }
 
@@ -94,6 +96,5 @@
     /* ? Estilizando o botão[link] */
     main > section.login > div.form > form > a{
         height: 40px;
-        padding-top: 6px;
     }
 }
