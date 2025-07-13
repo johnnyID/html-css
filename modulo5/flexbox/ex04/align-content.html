@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento quando os itens quebram de linha</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1, h2, p{
+            margin: 10px;
+        }
+
+        div.container{
+            display: flex;
+            flex-flow: row wrap;
+            margin: 10px;
+
+            height: 150px;
+            background-color: lightsalmon;
+            border: 1px solid black;
+        }
+
+        div#cont1{
+            /* Alinhamento de linhas
+            
+            align-content: stretch; = as linhas são esticadas para ocupar todo o espaço do container com altura iguais entre elas no eixo transversal [cross-axis]
+            */
+            align-content: stretch;
+        }
+
+        div#cont2{
+            /* Alinhamento de linhas
+            
+            align-content: flex-start; = as linhas são alinhadas na borda inicial [cross-start] do eixo transversal [cross-axis]
+            */
+            align-content: flex-start;
+        }
+
+        div#cont3{
+            /* Alinhamento de linhas 
+            
+            align-content: center; = as linhas são alinhadas no centro do eixo transversal [cross-axis]
+            */
+            align-content: center;
+        }
+
+        div#cont4{
+            /* Alinhamento de linhas
+            
+            align-content: flex-end; = as linhas são alinhadas na borda final [cross-end] do eixo transversal [cross-axis]
+            */
+            align-content: flex-end;
+        }
+
+        div#cont5{
+            /* Alinhamento de linhas
+            
+            align-content: space-between; = a primeira linha alinha-se na borda inicial [cross-start], a última na borda final [cross-end] e criam-se espaços iguais entre as demais linhas no eixo transversal [cross-axis]
+            */
+            align-content: space-between;
+        }
+
+        div#cont6{
+            align-content: space-evenly;
+        }
+
+        div.item{
+            padding: 20px;
+
+
+            background-color: lightgrey;
+            border: 1px solid black;
+
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <h2>Container: Alinhamento das linhas nos eixos -- align-content</h2>
+    <p>
+        A propriedade <strong>align-content</strong> é utilizada para alinhar as linhas no eixo transversal [cross-axis], diferente do align-items que <strong>alinha os itens</strong> dentro das linhas.
+    </p>
+    <p>
+        [ align-content: stretch; ] - Ao quebrar de linha, as mesmas são esticadas para ocupar todo o espaço do container com altura iguais.
+    </p>
+    <div id="cont1" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        [ align-content: flex-start; ] - Ao quebrar de linha, as mesmas são alinhadas na borda inicial [cross-start] do eixo transversal [cross-axis]
+    </p>
+    <div id="cont2" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        [ align-content: center; ] - Ao quebrar de linha, as mesmas são alinhadas no centro do eixo transversal [cross-axis]
+    </p>
+    <div id="cont3" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        [ align-content: flex-end; ] - Ao quebrar de linha, as mesmas são alinhadas na borda final [cross-end] do eixo transversal [cross-axis]
+    </p>
+    <div id="cont4" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        [ align-content: space-between; ] - Ao quebrar de linha, a primeira é alinhada na borda inicial [cross-start], a última na borda final [cross-end] e criam-se espaços iguais entre as demais no eixo transversal [cross-axis]
+    </p>
+    <div id="cont5" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        [ align-content: space-evenly; ] - Ao quebrar de linha, criam-se espaços iguais nas bordas [cross-start e cross-end] e entre demais linhas no eixo transversal [cross-axis] 
+    </p>
+    <div id="cont6" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        [ align-content: space-around; ] - Ao quebrar de linha, criam-se espaços nas bordas [cross-start e cross-end] que são metade dos espaços entre as demais linhas no eixo transversal [cross-axis]
+    </p>
+</body>
+</html>

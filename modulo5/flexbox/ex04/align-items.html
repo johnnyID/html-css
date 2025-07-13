@@ -17,7 +17,7 @@
         div#cont1{
             /* Alinhamento
             
-            align-items: stretch; = Os itens se alinham à altura do container, criando um efeito de esticar. 
+            align-items: stretch; = Os itens se alinham à altura das linhas dentro do container, criando um efeito de esticar. 
             */
             align-items: stretch;
         }
@@ -25,7 +25,7 @@
         div#cont2{
             /* Alinhamento
             
-            align-items: flex-start; = Os itens alinham-se na borda inicial [cross-start] do eixo transversal [cross-axis].
+            align-items: flex-start; = Os itens alinham-se na borda inicial [cross-start] das linhas dentro do container no eixo transversal [cross-axis].
             */
             align-items: flex-start;
         }
@@ -33,7 +33,7 @@
         div#cont3{
             /* Alinhamento
             
-            align-itens: center; = Os itens alinham-se no centro do container, criando espaços nas bordas [cross-start e cross-end] do eixo transversal [cross-axis]
+            align-itens: center; = Os itens alinham-se no centro das linhas dentro do container, criando espaços nas bordas [cross-start e cross-end] no eixo transversal [cross-axis]
             */
             align-items: center;
         }
@@ -41,7 +41,7 @@
         div#cont4{
             /* Alinhamento
             
-            align-items: flex-end; = Os itens alinham-se na borda final [cross-end] do eixo transversal [cross-axis].
+            align-items: flex-end; = Os itens alinham-se na borda final [cross-end] das linhas dentro do container no eixo transversal [cross-axis].
             */
             align-items: flex-end;
         }
@@ -61,12 +61,12 @@
 </head>
 <body>
     <h1>FlexBox</h1>
-    <h2>Alinhamento dos Itens nos Eixos -- align-items</h2>
+    <h2>Container: Alinhamento dos Itens nos Eixos -- align-items</h2>
     <p>
-        A propriedade align-items é utilizado para alinhar e organizar os itens dentro do container, sendo o align-items para o eixo transversal [cross-axis]. Vejamos exemplos.
+        A propriedade align-items é utilizado para alinhar e organizar os itens dentro das linhas do container, sendo o align-items para o eixo transversal [cross-axis]. Vejamos exemplos.
     </p>
     <p>
-        [ align-items: stretch; ] - Os itens alinham-se à altura do container, criando um efeito de esticar. Valor padrão.
+        [ align-items: stretch; ] - Os itens alinham-se à altura das linhas dentro do container, criando um efeito de esticar. Valor padrão.
     </p>
     <div id="cont1" class="container">
         <div class="item">A</div>
@@ -76,7 +76,7 @@
         <div class="item">E</div>
     </div>
     <p>
-        [ align-items: flex-start; ] - Os itens alinham-se na borda inicial [cross-start] do eixo transversal.
+        [ align-items: flex-start; ] - Os itens alinham-se na borda inicial [cross-start] da linhas dentro do container no eixo transversal.
     </p>
     <div id="cont2" class="container">
         <div class="item">A</div>
@@ -86,7 +86,7 @@
         <div class="item">E</div>
     </div>
     <p>
-        [ align-items: center; ] - Os itens alinham-se no centro do container, criando espaços nas bordas [cross-start e cross-end] do eixo transversal [cross-axis].
+        [ align-items: center; ] - Os itens alinham-se no centro da linha dentro do container, criando espaços nas bordas [cross-start e cross-end] no eixo transversal [cross-axis].
     </p>
     <div id="cont3" class="container">
         <div class="item">A</div>
@@ -96,7 +96,7 @@
         <div class="item">E</div>
     </div>
     <p>
-        [ align-items: flex-end; ] - Os itens alinham-se na borda final [cross-end] do eixo transversal [cross-axis].
+        [ align-items: flex-end; ] - Os itens alinham-se na borda final [cross-end] das linhas dentro container no eixo transversal [cross-axis].
     </p>
     <div id="cont4" class="container">
         <div class="item">A</div>
