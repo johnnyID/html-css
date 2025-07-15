@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+        div.container{
+            display: flex;
+            flex-flow: row nowrap;
+
+            background-color: lightsalmon;
+            border: 1px solid black;
+        }
+
+        div.item{
+            padding: 10px;
+
+            background-color: lightgrey;
+            border: 1px solid black;
+        }
+
+        div#cont1.container > div.item{
+            /* Tamanho do item
+            
+            flex-basis: auto; = tamanho do item é determinado pelo tamanho dos elementos dentro de si
+            */
+            flex-basis: auto;
+        }
+
+        div#cont2.container > div.item{
+            /* Tamanho do item
+            
+            flex-basis: px; = tamanho do item é determinado pelo tamanho definido em pixels ou qualquer outro valor numérico com sua respectiva medida, podendo ser px, pt, em, rem, %...
+            */
+            flex-basis: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <h2>Itens: Alinhamento de itens -- flex-basis</h2>
+    <p>
+        A propriedade flex-basis determina o tamanho do item no eixo principal [main-axis], substituindo o width [caso flex-flow: row; ] ou height [caso flex-flow: column;]
+    </p>
+    <p>
+        [ flex-basis: auto; ] - Valor padrão. O tamanho do item é determinado pelo tamanho dos elementos dentro de si, ou seja, quanto maior o elemento, texto por exemplo, maior o item.
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">pequeno</div>
+        <div class="item">pequeno maior</div>
+        <div class="item">Grande Maior</div>
+        <div class="item">Grande bem maior</div>
+        <div class="item">Gigantescamente grande</div>
+    </div>
+    <p>
+        [ flex-basis: px; ] - Personaliza o tamanho pela quantidade de pixels definida. Pode ser qualquer outra medida: px, pt, em, rem, %...
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">pequeno</div>
+        <div class="item">pequeno maior</div>
+        <div class="item">grande maior</div>
+        <div class="item"> grande bem maior</div>
+        <div class="item">gigantescamente grande</div>
+    </div>
+</body>
+</html>

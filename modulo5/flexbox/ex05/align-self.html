@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+
+        div.container{
+            display: flex;
+
+            height: 200px;
+
+            background-color: lightsalmon;
+            border: 1px solid black;
+        }
+
+        div.item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            
+            background-color: lightgrey;
+            border: 1px solid black;
+
+            font-size: .95em;
+        }
+
+        div#i1{
+            /* Alinhamento individual dos itens
+            
+            align-self: auto; = herda o valor do container [align-items ou align-content] do eixo transversal [cross-axis]
+            */
+            align-self: auto;
+        }
+
+        div#i2{
+            /* Alinhamento individual dos itens
+            
+            align-self: stretch; = atribui ao item, um efeito de esticar, ocupando todo o espaço da linha no eixo transversal [cross-axis]
+            */
+            align-self: stretch;
+        }
+
+        div#i3{
+            /* Alinhamento individual dos itens
+            
+            align-self: flex-start; = alinha os itens na borda inicial [cross-start] da linha do eixo transversal [cross-axis]
+            */
+            align-self: flex-start;
+        }
+
+        div#i4{
+            /* Alinhamento individual dos itens
+            
+            align-self: center: = centraliza os itens na linha do eixo transversal [cross-axis]
+            */
+            align-self: center;
+        }
+
+        div#i5{
+            /* Alinhamento individual dos itens
+            
+            align-self: flex-send; = alinha os itens na borda final [cross-end] da linha do eixo transversal [cross-axis]
+            */
+            align-self: flex-end;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <h2>Itens: Alinhamento de itens -- align-self</h2>
+    <p>
+        A propriedade align-self interage diretamente nos itens, alterando seu alinhamento no eixo transversal [cross-axis]. Diferente do align-items que personaliza o alinhamento dos itens como um conjunto, o align-self personaliza o alinhamento individualmente de cada item na linha no eixo transversal [cross-axis]
+    </p>
+    <p>
+        [ align-self: auto; ] - Herda o valor do container do eixo transversal [cross-axis], align-items ou align-content . Valor padrão.
+    </p>
+    <p>
+        [ align-self: stretch; ] - Atribui ao item, um efeito de esticar, ocupando todo o espaço da linha no eixo transversal [cross-axis]
+    </p>
+    <p>
+        [ align-self: flex-start; ] - Alinha o item na borda inicial [cross-start] da linha do eixo transversal [cross-axis]
+    </p>
+    <p>
+        [ align-self: center; ] - Alinha o item no centro da linha do eixo transversal [cross-axis]
+    </p>
+    <p>
+        [ align-self: flex-end; ] - Alinha o item na borda final [cross-end] da linha do eixo transversal [cross-axis]
+    </p>
+    <p>
+        Exemplo de cada alinhamento abaixo:
+    </p>
+    <div class="container">
+        <div class="item" id="i1">align-self: auto;</div>
+        <div class="item" id="i2">align-self: stretch;</div>
+        <div class="item" id="i3">align-self: flex-start;</div>
+        <div class="item" id="i4">align-self: center;</div>
+        <div class="item" id="i5">align-self: flex-end;</div>
+    </div>
+</body>
+</html>

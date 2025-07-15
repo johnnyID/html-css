@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.container{
+            display: flex;
+            flex-flow: row nowrap;
+
+            background-color: lightsalmon;
+            border: 1px solid black;
+        }
+
+        div#cont1 > div.item{
+            /* Aumento dos itens em relação ao espaço disponível da linha
+            
+            flex-grow: 0; = Valor padrão. Os itens não podem crescer para ocupar todo o espaço disponível da linha no eixo principal [main-axis] de forma responsiva.
+            */
+            flex-grow: 0;
+
+            flex-basis: 40px;
+        }
+
+        div#cont2.container > div.item{
+            /* Aumento dos itens em relação ao espaço disponível da linha
+            
+            flex-grow: 1; = permite os itens aumentarem de tamanho para ocupar todo o espaço disponível da linha do container no eixo principal [main-axis] de forma responsiva.
+            */
+            flex-grow: 1;
+        }
+
+        div#cont3.container{
+            
+        }
+
+        div#cont3 > div#it1.item{
+            flex-grow: 0;
+        }
+
+        div#cont3 > div#it2.item{
+            flex-grow: 1;
+        }
+
+        div#cont3 > div#it3.item{
+            flex-grow: 2;
+        }
+
+        div#cont4.container{
+            /* 
+            Permitindo a quebra de linha
+            */
+            flex-flow: row wrap;
+        }
+
+        div#cont4 > div.item{
+            /* Alterando o tamanho dos itens no eixo principal */
+            flex-basis: 80px;
+            /* Permitindo os itens ocupar todo o espaço da linhas do container no eixo principal */
+            flex-grow: 1;
+        }
+
+        div.item{
+            padding: 20px;
+
+            background-color: lightgrey;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <h2>Itens: Aumento de tamanho dos itens no eixo principal -- flex-grow</h2>
+    <p>
+        A propriedade flex-grow permite os itens aumentarem de tamanho para ocupar todo o espaço disponível da linha do container no eixo principal [main-axis]. O mesmo possui apenas dois valores, sendo eles: 0 para negar o aumento de tamanho e 1 para permitir o aumento de tamanho
+    </p>
+    <p>
+        [ flex-grow: 0; ] - Como valor padrão, flex-grow não permite o aumento de tamanho dos itens para ocupar todo o espaço disponível da linha do container no eixo principal [main-axis] de forma responsiva.
+    </p>
+    <div id="cont1" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        [ flex-grow: 1; ] - Com valor sendo 1, flex-grow permite o aumento de tamanho dos itens para ocupar todo o espaço disponível da linha do container no eixo principal [main-axis] de forma responsiva.
+    </p>
+    <div id="cont2" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        Podemos também, utilizar de forma individual, o flex-grow para cada item, podendo passar como valor [flex-grow: 1; /ou flex-grow: 2; /ou flex-grow: 3; /ou flex-grow: n; (n = n números)] cada valor é uma parte maior do espaço extra, ou seja, com um container com 600px de espaço extra, o valor do item que possui [flex-grow: 1;] pega 1/6 do espaço, o valor do item que possui [flex-grow: 2;] pega 2/6 do espaço, o valor que o item possui [flex-grow: 3;] pega 3/6 do espaço. Ao somarmos as frações, vemos que atinge o valor de 6/6, ou seja, o valor distribuídos entre cada fração, é justamente o valor total do container. Vejamos exemplo abaixo:
+    </p>
+    <p>
+        Exemplo: container com 600px de espaço extra com 3 itens, o primeiro item com [flex-grow: 0;], o segundo com [flex-grow: 1;] e o terceiro com [flex-grow: 2;].
+    </p>
+    <p>
+        Primeiro item - [flex-grow: 0;] não permite crescer, mas possui seu próprio valor<br>
+        Segundo item - [flex-grow: 1;] permite crescer 1/3 do espaço extra = 200px<br>
+        Terceiro item - [flex-grow: 2;] permite crescer 2/3 do espaço  = 400px<br>
+        Somados, eles aumentarão 3/3 do espaço extra, 600px. 
+    </p>
+    <div id="cont3" class="container">
+        <div id="it1" class="item"></div>
+        <div id="it2" class="item"></div>
+        <div id="it3" class="item"></div>
+    </div>
+    <p>
+        Ao utilizar [flex-grow: 1;] nos itens e [flex-flow: row wrap;] no container, o tamanho dos itens vão adaptar-se de uma forma responsiva que beira a maravilha. Vejamos:
+    </p>
+    <div id="cont4" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

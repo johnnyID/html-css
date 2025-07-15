@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+
+        div.container{
+            display: flex;
+
+            background-color: lightsalmon;
+            border: 1px solid black;
+        }
+
+        div#cont1 > div.item{
+            /* Encolhimento dos itens em relação ao espaço comprimido 
+            
+            flex-shrink: 1; = permite os itens encolherem quando o espaço da linha do container tenta ser menor que o tamanho dos itens inicial no eixo principal [main-axis].
+            */
+            flex-shrink: 1;
+        }
+
+        div#cont2 > div.item{
+            /* Encolhimento dos itens em relação ao espaço comprimido
+            
+            flex-shrink: 0;  não permite o encolhimento dos itens quando o espaço da linha do container tenta ser menor que o tamanho dos itens inicial, fazendo com que o itens transborde do container no eixo principal [main-axis].
+            */
+            flex-shrink: 0;
+        }
+
+        div#cont3 > div#it1.item{
+            flex-shrink: 1;
+        }
+
+        div#cont3 > div#it2.item{
+            flex-shrink: 3;
+        }
+
+        div#cont3 > div#it3.item{
+            flex-shrink: 2;
+        }
+
+        div.item{
+            padding: 20px;
+            flex-basis: 50px;
+
+            background-color: lightgrey;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <h2>Itens: Encolhimento dos itens no eixo principal -- flex-shrink</h2>
+    <p>
+        A propriedade flex-shrink permite aos itens encolherem para caber dentro da linha, quando o tamanho da mesma não puder mais conter os itens dentro de si.
+    </p>
+    <p>
+        [ flex-shrink: 1; ] - Como valor padrão, flex-shrink permite o encolhimento dos itens para caber dentro da linha do container quando a mesma não puder conter os itens dentro de si ao ser comprimida no eixo principal [main-axis].
+    </p>
+    <div id="cont1" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        [ flex-shrink: 0; ] - Com valor sendo 0, flex-shrink não permite que os itens encolham-se quando a linha do container não puder conter mais os itens dentro de si ao ser comprimida, fazendo com que os itens transborde para fora do container no eixo principal [main-axis]
+    </p>
+    <div id="cont2" class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        Podemos também, utilizar o flex-shrink de forma individual para cada item, podemos passar como valor [flex-shrink: 1; /ou flex-shrink: 2; /ou flex-shrink: 3; /ou flex-shrink: n; (n = n números)] cada valor é uma parte que será retirada dos itens para caberem dentro do container, por exemplo, com o container tendo 400px de largura, com 3 itens dentro de si, sendo que os mesmo possuem 200px cada, no total, eles ocupariam 600px, porém não seria possível, teremos que remover 200px no total. Então o primeiro com [flex-shrink: 1;] retira 1/6 = 33.33px, o segundo com [flex-shrink: 2;] retira 66.66px, e o terceiro item com [flex-shrink: 3;] retira 100px. Somados, eles retiram 200px, fazendo com que encolham e caibam dentro do container. Vejamos:
+    </p>
+    <p>
+        Primeiro item = [flex-shrink: 1;] diminuirá em 1/6 = 33.33px<br>
+        Segundo item = [flex-shrink: 2;] diminuirá em 2/6 = 66.66px<br>
+        Terceiro item = [flex-shrink: 3;] diminuirá em 3/6 = 100px<br>
+        Somados, eles diminuirão 6/6 de 200px, posteriormente tiram a diferença entre o valor total que eles ocupam [600px] e o valor total retirado [200px], para caberem em um container com 400px
+    </p>
+    <div id="cont3" class="container">
+        <div id="it1" class="item"></div>
+        <div id="it2" class="item"></div>
+        <div id="it3" class="item"></div>
+    </div>
+</body>
+</html>
