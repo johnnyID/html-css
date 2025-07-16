@@ -27,6 +27,7 @@ header.container{
 
 
     background-color: rgb(102, 102, 102);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.444);
 
     transition: padding .5s ease;
 }
@@ -60,6 +61,7 @@ header.container > nav.container-menu > a{
 
     background-color: black;
     color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.391);
 
     text-decoration: none;
 
