@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background-color: rgba(185, 184, 184, 0.59);
+}
+
+header{
+    display: flex;
+
+
+    padding: 10px;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    background-color: grey;
+}
+
+header > h1{
+    color: white;
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.314);
+}
+
+header > nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+header > nav > ul{
+    display: block;
+    list-style-type: none;
+    width: 100%;
+}
+
+header > nav > ul > li{
+    margin: 10px 10px 0px 0px;
+}
+
+header > nav > ul > li > a{
+    display: inline-block;
+    
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+
+
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+header > nav > ul > li > a:hover{
+    background-color: white;
+    color: black;
+}
+
+main{
+    margin: 15px auto 0px auto;
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: white;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.167);
+
+}
+
+main > h2{
+    margin-bottom: 10px;
+}
+
+main > p{
+    text-indent: 20px;
+    line-height: 1.3em;
+}
