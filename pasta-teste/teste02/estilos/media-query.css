@@ -22,6 +22,7 @@
     /* ? Alterando a direcionamento do cabeçalho */
     header.container{
         flex-flow: row nowrap;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -32,7 +33,7 @@
 
     /* ? Alterando o posicionamento do menu */
     header.container > nav.container-menu{
-        justify-content: flex-end;
+        width: initial;
     }
     
     /* ? Alterando a largura do corpo do conteúdo */
