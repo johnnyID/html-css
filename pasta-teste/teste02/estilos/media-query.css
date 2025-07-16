@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 690px){
+    /* ? Alterando o posicionamento dos itens */
+    header.container{
+        align-items: flex-start;
+
+        padding: 15px;
+    }
+    
+    /* ? Alterando o direcionamento do menu */
+    header.container > nav.container-menu{
+        flex-flow: row nowrap;
+    }
+
+    header.container > nav.container-menu > a{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    /* ? Alterando a direcionamento do cabeçalho */
+    header.container{
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    /* ? Alterando o tamanho do parágrafo */
+    header.container > h1{
+        flex-basis: 200px;
+    }
+
+    /* ? Alterando o posicionamento do menu */
+    header.container > nav.container-menu{
+        justify-content: flex-end;
+    }
+    
+    /* ? Alterando a largura do corpo do conteúdo */
+    main{
+        width: 80%;
+    }
+}

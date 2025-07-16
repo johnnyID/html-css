@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* ? Configurações gerais */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ? Configurando o corpo do site */
+body{
+    background-color: rgb(193, 193, 193);
+}
+
+/* ? Configurando o cabeçalho */
+header.container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: rgb(102, 102, 102);
+
+    transition: padding .5s ease;
+}
+
+/* ? Estilizando o título */
+header.container > h1{
+    margin: 10px 0px;
+
+    color: white;
+
+    text-align: center;
+
+    text-shadow: 2px 2px 5px black
+}
+
+/* ? Estilizando o menu */
+header.container > nav.container-menu{
+    display: flex;
+    flex-flow: column nowrap;
+
+    width: 95%;
+
+    text-align: center;
+}
+
+/* ? Configurando a navegação */
+header.container > nav.container-menu > a{
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 10px;
+
+    background-color: black;
+    color: white;
+
+    text-decoration: none;
+
+    transition: background 0.5s ease, color .5s ease;
+}
+
+/* ? Configurando a navegação ao passar o cursor por cima */
+header.container > nav.container-menu > a:hover{
+    background-color: white;
+    color: black;
+}
+
+/* ? Configurando o corpo estrutural do conteúdo */
+main{
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 30px 0px 30px 0px;
+
+    background-color: white;
+
+    transition: width .5s ease;
+}
+
+/* ? Configurando o segundo título */
+main > h2{
+    margin-bottom: 10px;
+}
+
+/* ? Configurando o parágrafo */
+main > p{
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 1.3em;
+}
