@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+
+        div.container{
+            display: grid;
+            border: 2px dashed black;
+            grid-template-columns: minmax(100px, 200px) minmax(200px, 1fr) 1fr;
+            grid-template-rows: 100px 100px 100px 100px;
+            gap: 20px;
+        }
+
+        div.item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px dashed green;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Grid Layout</h1>
+    <p>
+        Grid layout é uma forma de estrutura bidimensional(interage ao mesmo tempo com as colunas e linhas) visando responsividade e organização macro de forma fluida de conteúdos do site. Vejamos um exemplo simples.
+    </p>
+    <p>
+        Aqui temos um layout do conteúdo principal, no qual organizamos os conteúdos de forma fluida.
+    </p>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
