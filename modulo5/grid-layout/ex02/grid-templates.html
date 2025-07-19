@@ -8,8 +8,30 @@
 
         div.container{
             display: grid;
+            
+            border: 1px dashed blueviolet;
+        }
+        
+        div#cont1{
+            /* Criação de colunas e modificação da largura
+            
+            grid-template-columns: 50px minmax(100px, 150px) 1fr; = A quantidade de valores atribuídos à propriedade é proporcional à quantidade de colunas, e suas medidas são relacionadas a cada coluna. primeiro valor = primeira coluna e sua largura de 50px, segundo valor = segunda coluna e sua largura com mínimo de 100px e máximo de 150px, terceiro valor = terceira coluna e sua largura 1 fração do espaço sobrando.
+            */
+            grid-template-columns: 50px minmax(100px, 150px) 1fr;
+
         }
 
+        div#cont2{
+            /* Criação de linhas e modificação da altura
+            
+            grid-template-rows: repeat(5, 50px); = A quantidade de valores atribuídos à propriedade é proporcional à quantidade de linhas, e suas medidas são relacionadas a cada linha. Temos apenas um valor, porém é uma função que repete 5 vezes, então será criada 5 linhas com 50px de altura cada.
+            */
+            grid-template-rows: repeat(5, 50px);
+        }
+
+        div.item{
+            border: 1px dashed green;
+        }
 
     </style>
 </head>
@@ -21,7 +43,18 @@
     </p>
     <!-- ! Podemos inserir vários valores, e a quantidade da mesma é proporcional à colunas criadas, sendo os valores: medidas e algumas funções para medidas -->
     [ grid-template-columns: 50px minmax(100px, 150px) 1fr; ] - Temos três valores inseridos, sendo 3 colunas criadas: 1° coluna 50px de largura, 2° coluna delimita o mínimo e o máximo de largura que o item poderá ter, sendo 100px o mínimo e 150px o máximo, e o 3° pode crescer 1 fração do espaço disponível.
-    <div class="container">
+    <div id="cont1" class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <p>
+    <!-- ! Podemos inserir vários valores, e a quantidade da mesma é proporcional à linhas criadas, sendo os valores: medidas e algumas funções para medidas -->
+        [ grid-template-rows: repeat(5, 50px); ] - Temos apenas um valor inserido, porém a função [repeat(5, 50px)] cria 5 linhas com altura de 50px cada.
+    </p>
+    <div id="cont2" class="container">
         <div class="item">A</div>
         <div class="item">B</div>
         <div class="item">C</div>

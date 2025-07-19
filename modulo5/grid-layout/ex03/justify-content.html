@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        div.container{
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            grid-template-rows: repeat(2, 50px);
+            border: 1px dashed green;
+            height: 200px;
+        }
+
+        div#cont1{
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(2, 50px);
+            justify-content: stretch;
+        }
+
+        div#cont2{
+            justify-content: start;
+        }
+
+        div#cont3{
+            justify-content: center;
+        }
+
+        div#cont4{
+            justify-content: end;
+        }
+
+        div#cont5{
+            justify-content: space-between;
+        }
+
+        div#cont6{
+            justify-content: space-evenly;
+        }
+
+        div#cont7{
+            justify-content: space-around;
+        }
+
+        div.item{
+            border: 1px dashed blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Grid Layout</h1>
+    <h2>Container: Alinhamento horizontal das linhas/track-lines -- justify-content</h2>
+    <p>
+        A propriedade justify-content no grid layout tem como função alinhar apenas o conjunto das colunas horizontalmente dentro da grade/grid.
+    </p>
+    <p>
+        [ justify-content: stretch; ] - Valor padrão. Permite os conjunto das colunas esticarem-se para caber 100% do espaço do container
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ justify-content: start; ] - Alinha o conjunto das colunas no início do eixo horizontal.
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ justify-content: center; ] - Alinha o conjunto das colunas no centro do eixo horizontal.
+    </p>
+    <div id="cont3" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ justify-content: end; ] - Alinha o conjunto das colunas no final do eixo horizontal.
+    </p>
+    <div id="cont4" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ justify-content: space-between; ] - A primeira coluna é posta no início do eixo horizontal, a última coluna no final, e cria-se espaços entre as demais colunas.
+    </p>
+    <div id="cont5" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ justify-content: space-evenly; ] - Cria-se espaços iguais nas bordas e entre as colunas.
+    </p>
+    <div id="cont6" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ justify-content: space-around; ] - Cria-se espaços nas bordas, que são metade dos espaços entre as demais colunas.
+    </p>
+    <div id="cont7" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

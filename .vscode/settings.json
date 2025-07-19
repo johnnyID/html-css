@@ -1,5 +1,7 @@
 {
-    "vscode-pets.petSize": "medium",
+    "vscode-pets.petSize": "large",
     "vscode-pets.throwBallWithMouse": true,
-    "vscode-pets.theme": "none"
+    "vscode-pets.theme": "none",
+    "vscode-pets.disableEffects": false,
+    "vscode-pets.position": "explorer"
 }
