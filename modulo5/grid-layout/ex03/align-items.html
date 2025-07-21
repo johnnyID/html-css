@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        div.container{
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 100px);
+            justify-content: center;
+            border: 2px dashed blue;
+        }
+
+        div#cont1{
+            align-items: stretch;
+        }
+
+        div#cont2{
+            align-items: start;
+        }
+
+        div#cont3{
+            align-items: center;
+        }
+        
+        div#cont4{
+            align-items: end;
+        }
+
+        div.item{
+            border: 1px dashed green;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Grid layout</h1>
+    <h2>Container: Alinhamento dos itens no eixo vertical -- align-items</h2>
+    <p>
+        A propriedade align-items tem como função, alinhar os itens dentro de cada grid-track no eixo vertical[track-rows]
+    </p>
+    <p>
+        [ align-items: stretch; ] - Valor padrão. Os itens esticam-se para ocupar 100% do espaço de cada grid-track [track-columns ou track-rows] no eixo vertical [track-rows]
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ align-items: start; ] - Alinha os itens no início de cada grid-track [track-columns ou track-rows] no eixo vertical [track-rows].
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ align-items: center; ] - Centraliza os itens no centro de cada grid-track [ track-columns ou track-rows] no eixo vertical [track-rows].
+    </p>
+    <div id="cont3" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ align-items: end; ] - Alinha os itens no final de cada grid-track [track-columns ou track-rows] no eixo vertical [track-rows].
+    </p>
+    <div id="cont4" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

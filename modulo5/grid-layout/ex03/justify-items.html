@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        div.container{
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 100px);
+            justify-content: center;
+            border: 2px dashed blue;
+        }
+
+        div#cont1{
+            justify-items: stretch;
+        }
+
+        div#cont2{
+            justify-items: start;
+        }
+
+        div#cont3{
+            justify-items: center;
+        }
+
+        div#cont4{
+            justify-items: end;
+        }
+
+        div.item{
+            border: 1px dashed green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Layout</h1>
+    <h2>Container: Alinhamento dos itens no eixo horizontal -- justify-items</h2>
+    <p>
+        A propriedade justify-items tem como função, alinhar os itens dentro de cada grid-track no eixo horizontal[track-columns]
+    </p>
+    <p>
+        [ justify-items: stretch; ] - Valor padrão. Os itens esticam-se para ocupar 100% do espaço de cada grid-track[track-columns ou track-rows].
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ justify-items: start; ] - Alinha os itens no início de cada grid-track[track-columns ou track-rows] no eixo horizontal.
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ justify-items: center; ] - Centraliza os itens no centro de cada grid-track[track-columns ou rack-rows] no eixo horizontal.
+    </p>
+    <div id="cont3" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ justify-items: end; ] - Alinha os itens no final de cada grid-track[track-columns ou rack-rows] no eixo horizontal.
+    </p>
+    <div id="cont4" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

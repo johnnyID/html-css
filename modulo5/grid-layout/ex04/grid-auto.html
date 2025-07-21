@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        div.container{
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(2, 100px);
+            border: 2px dashed blue;
+        }
+
+        div#cont1{
+            grid-template-rows: repeat(3, 100px);
+        }
+
+        div#cont2{
+            grid-template-columns: repeat(4, auto); 
+        }
+
+        div.item{
+            border: 1px dashed green;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Grid Layout</h1>
+    <h2>Container: Grid implícito -- grid-auto-rows e grid-auto-columns</h2>
+    <p> 
+        Grid implícito é a adição de mais columns/rows no grid, no qual não declaramos suas características - largura/altura -, ou seja, se por algum acaso o back-end com sua lógica adicionar uma nova columns/row, as mesmas não terão a mesma características das antes declaradas, elas terão o valor padrão dela mesma, não possuindo o comportamento das demais. Para resolver este problema, temos duas propriedades que automatiza as características que serão atribuídas para todas as columns/rows adicionadas posteriormente, sendo elas: grid-auto-columns e grid-auto-rows.
+    </p>
+    <p>
+        Ambas propriedades - grid-auto-columns e grid-auto-rows - delimita suas características - largura ou altura - para columns/rows adicionadas posteriormente das demais, ou seja, podemos personalizar com as mesmas medidas das anteriores. O uso destas propriedades facilita na dinamicidade do código, pois não há necessidade de ir no CSS adicionar uma nova column/row nas propriedades grid-template-columns e grid-template-rows. Imagina como seria adicionar novas columns/rows manualmente quando necessário.
+    </p>
+    <p>
+        [ grid-auto-rows: 100px; ] - Toda linha/row adicionada posteriormente, terá sua altura determinada para 100px.
+    </p>
+    <p>
+        Devido o comportamento diferente das colunas e linhas, ao criar uma nova linha, a mesma se ajusta ao conteúdo do item, tendo uma altura bem pequena, diferente das colunas, que deixam espaços bem maiores.
+    </p>
+    <p>
+        Exemplo visual de como seria sem a propriedade grid-auto-rows:
+    </p>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <p>
+        Exemplo visual com a propriedade grid-auto-rows:
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <p>
+        [ grid-auto-columns: auto; ] - Toda coluna/column adicionada posteriormente, terá sua largura determinada para auto.
+    </p>
+    <p>
+        O exemplo visual da criação de novas colunas ao declararmos, é diferente do comportamento das linhas, enquanto as linhas se ajustam ao conteúdo da mesma, as colunas não são tão precisas, deixando um espaço horizontal maior.
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+</body>
+</html>
