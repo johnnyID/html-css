@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+    <style>
+
+        div.container{
+            display: grid;
+            height: 300px;
+            grid-template: repeat(2, 100px) / repeat(5, 1fr);
+
+            border: 3px dashed blue;
+        }
+
+        div#caixa1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            border: 2px dashed green;
+        }
+        
+        div#caixa2{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            border: 2px dashed red;
+        }
+        
+        div#caixa3{
+            grid-column-start: 5;
+            grid-column-end: 6;
+            border: 2px dashed purple;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Grid Layout</h1>
+    <h2>Itens: Alinhamento dos itens com base nas grid-lines no eixo vertical -- grid-column-start e grid-column-end</h2>
+    <p>
+        A propriedade grid-row-start/end tem como função posicionar os itens no container de forma precisa e com objetivo principal em ocupar uma área maior das grid-lines, ou seja, em um container 3x3 = 9<sup>2</sup> a possibilidade de itens que podem ocupar é de 9, porém 3 itens podem ocupar todo o espaço, e esse é o objetivo da propriedade, posicionar e ocupar uma área maior de cada item.
+    </p>
+    <p>
+        Exemplo: Um container com 3 itens ocupando um espaço preciso no eixo vertical
+    </p>
+    <p>
+        [ grid-column-start: 1; ] - Valor vertical inicial 1 /
+        [ grid-column-end: 1; ] - Valor vertical final 1<br>
+
+        [ grid-column-start: 1; ] - Valor vertical inicial 1 /
+        [ grid-column-end: 1; ] - Valor vertical final 1<br>
+
+        [ grid-column-start: 1; ] - Valor vertical inicial 1 /
+        [ grid-column-end: 1; ] - Valor vertical final 1
+        
+    </p>
+    <div class="container">
+        <div id="caixa1" class="item"></div>
+        <div id="caixa2" class="item"></div>
+        <div id="caixa3" class="item"></div>
+    </div>
+</body>
+</html>

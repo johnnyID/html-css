@@ -4,10 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout</title>
+    <style>
+
+        div.container{
+            display: grid;
+            height: 300px;
+
+            border: 2px dashed blue;
+        }
+
+        div#cont1{
+            /* Criação de colunas e linhas, cada uma com suas medidas
+            
+            grid-template: repeat(2, auto) / repeat(3, auto); = Forma abreviada de declarar colunas e linhas com suas medidas
+            */
+            grid-template: repeat(2, auto) / repeat(3, auto);
+        }
+
+        div#cont2{
+            grid-template: repeat(2, auto) / repeat(3, auto);
+            /* Alinhamento vertical e horizontal do conjunto das colunas e linhas
+            
+            place-content: start center; = Forma abreviada de declarar o alinhamento das linhas e colunas. primeiro valor: vertical e o segundo valor: horizontal. 
+            */
+            place-content: start center;
+        }
+
+        div#cont3{
+            grid-template: repeat(2, auto) / repeat(3, auto);
+            /* Alinhamento vertical e horizontal dos itens
+            
+            place-items: end center; = Forma abreviada de declarar o alinhamento dos itens. Primeiro valor: vertical e o segundo valor: horizontal.
+            */
+            place-items: end center;
+        }
+
+        div.item{
+            border: 1px dashed green;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Grid layout</h1>
-    <h2>Container: Shorthand</h2>
-    
+    <h2>Container: Shorthand -- grid-templete, place-content e place-items</h2>
+    <p>
+        Este exercício é apenas para mostrar uma forma abreviada das propriedades mostradas anteriormente.
+    </p>
+    <p>
+        [ grid-template: 100px / auto; ] - grid-templete é a junção das propriedades grid-templete-rows e grid-templete-columns, no qual o primeiro valor representa as linhas/rows e o segundo as colunas/columns. Percebe-se a barra entre os valores, isso porque é necessário para separar cada um
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ place-content: start center; ] - place-content é a junção das propriedades align-content e justify-content, no qual o primeiro valor representa o align-content, e o segundo o justify-content.
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <p>
+        [ place-items: center end; ] - place-items é a junção das propriedades align-items e justify-items, no qual o primeiro valor representa o align-items, e o segundo o justify-items.
+    </p>
+    <div id="cont3" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
 </body>
 </html>

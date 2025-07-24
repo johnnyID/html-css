@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        div.container{
+            display: grid;
+            height: 200px;
+            grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+            gap: 10px;
+
+            border: 2px dashed blue;
+        }
+
+        #cont1{
+            /* Determinando a direção em que novos itens serão dispostos
+            
+            grid-auto-flow: row; = Todos os novos itens criados serão dispostos na direção das linhas.
+            */
+            grid-auto-flow: row;
+        }
+
+        #cont2{
+            /* Determinando a direção em que novos itens serão dispostos
+            
+            grid-auto-flow: column; = Todos os novos itens criados serão dispostos na direção das colunas.
+            */
+            grid-auto-flow: column;
+        }
+
+        div.item{
+            border: 1px dashed green;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Grid Layout</h1>
+    <h2>Container: Direção em que novas linhas/colunas são criadas -- grid-auto-flow</h2>
+    <p>
+        A propriedade grid-auto-flow tem como função, determinar a direção em que as novos itens serão adicionados, seja em colunas ou linhas.
+    </p>
+    <p>
+        [ grid-auto-flow: row; ] - Valor padrão. Ao criar novas novos itens, os mesmos serão dispostos na direção das linhas, ou seja, serão adicionados embaixo das demais.
+    </p>
+    <div id="cont1" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <p>
+        [ grid-auto-flow: column; ] - Ao criar novos itens, os mesmos serão dispostos na direção das colunas, ou seja, serão adicionados do lado das colunas.
+    </p>
+    <div id="cont2" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+</body>
+</html>

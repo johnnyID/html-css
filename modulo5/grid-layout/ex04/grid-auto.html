@@ -8,17 +8,23 @@
 
         div.container{
             display: grid;
-            grid-template-columns: repeat(3, auto);
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 100px);
             border: 2px dashed blue;
         }
 
         div#cont1{
-            grid-template-rows: repeat(3, 100px);
+            grid-auto-rows: 100px;
         }
 
         div#cont2{
-            grid-template-columns: repeat(4, auto); 
+            grid-auto-flow: column;
+        }
+
+        div#cont3{
+            grid-auto-flow: column;
+            grid-auto-columns: 100px;
+
         }
 
         div.item{
@@ -40,10 +46,7 @@
         [ grid-auto-rows: 100px; ] - Toda linha/row adicionada posteriormente, terá sua altura determinada para 100px.
     </p>
     <p>
-        Devido o comportamento diferente das colunas e linhas, ao criar uma nova linha, a mesma se ajusta ao conteúdo do item, tendo uma altura bem pequena, diferente das colunas, que deixam espaços bem maiores.
-    </p>
-    <p>
-        Exemplo visual de como seria sem a propriedade grid-auto-rows:
+        Exemplo visual de como seria sem a propriedade grid-auto-rows ao ser adicionada uma nova linha:
     </p>
     <div class="container">
         <div class="item">1</div>
@@ -67,12 +70,24 @@
         <div class="item">7</div>
     </div>
     <p>
-        [ grid-auto-columns: auto; ] - Toda coluna/column adicionada posteriormente, terá sua largura determinada para auto.
+        [ grid-auto-columns: 50px; ] - Toda coluna/column adicionada posteriormente, terá sua largura determinada como 50px.
     </p>
     <p>
-        O exemplo visual da criação de novas colunas ao declararmos, é diferente do comportamento das linhas, enquanto as linhas se ajustam ao conteúdo da mesma, as colunas não são tão precisas, deixando um espaço horizontal maior.
+        Exemplo visual de como seria sem o uso da propriedade grid-auto-columns ao ser adicionada uma nova coluna
     </p>
     <div id="cont2" class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <p>
+        Exemplo visual com a propriedade grid-auto-columns:
+    </p>
+    <div id="cont3" class="container">
         <div class="item">1</div>
         <div class="item">2</div>
         <div class="item">3</div>
