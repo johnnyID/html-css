@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/* ? Configurações gerais */
+*{
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ? Estrutura do corpo da página */
+body{
+    width: 100vw; height: 100dvh;
+    background-color: #65bbdeac;
+}
+
+/* ? Posicionamento da estrutura principal do conteúdo + imagem */
+div.grid-container{
+    display: grid;
+    grid-template: auto / auto;
+    place-content: center center;
+    width: 100vw; height: 100dvh;
+}
+
+/* ? Personalizando a estrutura principal do conteúdo + imagem */
+main{
+    display: flex;
+    flex-flow: column;
+    width: 300px; height: 550px;
+
+    background: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.378);
+    border-radius: 30px;
+    overflow: hidden;
+
+    transition: width .2s ease, height .2s linear;
+}
+
+/* ? Personalizando a seção de imagem */
+section.img{
+    flex: 0 0 45%;
+
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.303);
+    background: url("../imagens/predio.jpg") no-repeat center;
+    background-size: cover;    
+}
+
+/* ? Personalizando a seção de conteúdo */
+section.content{
+    flex: 0 0 55%;
+    padding: 5px;
+}
+
+/* ? Personalizando o título */
+section.content > h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ? Personalizando o parágrafo */
+section.content > p{
+    margin-bottom: 10px;
+    font-size: .9rem;
+}
+
+/* ? Personalizando o container que contém os inputs */
+section.content > form > div.dados{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: 2px solid #6C7A8C;
+
+    background-color: #6C7A8C;
+}
+
+/* ? Personalizando a conexão entre os ícones e os inputs de entrada de dados */
+section.content > form > div.dados > label{
+    margin-left: 10px;
+}
+
+/* ? Personalizando os ícones */
+section.content > form > div.dados > label > span{
+    margin-top: 4px;
+    font-size: 2rem;
+
+    color: white;
+}
+
+/* ? Personalização dos inputs */
+section.content > form > div.dados > input{ 
+    width: 100%; height: 100%;
+    padding-left: 5px;
+    border-radius: 10px;
+
+    border: none;
+    color: white;
+    background: #7bb7eb;
+    font-weight: bold;
+}
+
+/* ? personalização dos inputs enquanto focado */
+section.content > form > div.dados > input:focus{
+    background-color: white;
+    color: black;
+}
+
+/* ? Personalizando a cor das letras do placeholder enquanto focado */
+section.content > form > div.dados > input:focus::placeholder{color: black;}
+
+/* ? Personalizando a cor das letras do placeholder */
+section.content > form > div.dados > input::placeholder{
+    color: white;
+    font-weight: bold;
+}
+
+/* ? Personalizando o botão de submit */
+section.content > form > input[type=submit]{
+    width: 100%; height: 40px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    border: none;
+    background-color: #8DD5F2;
+}
+
+/* ? Personalizando o botão de submit enquanto passar o mouse por cima */
+section.content > form > input[type=submit]:hover{
+    background-color: #5A90BF;
+}
+
+/* ? Transformando o link num botão personalizado */
+section.content > form > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+    margin-top: 8px;
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: black;
+    border: 2px solid #94E9F2;
+}
+
+/* ? Personalizando o botão de link enquanto passar o mouse por cima */
+section.content > form > a:hover{
+    background-color: #94E9F2;
+}
