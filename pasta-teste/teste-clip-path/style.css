@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    width: 100vw; height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-direction: column;
+}
+
+/* ! Aqui utilizamos do container para aplicar sombras no elemento. Devido ao recorte feito no elemento, não é possível aplicar no mesmo, pois o recorte corta tudo do elemento, até mesmo a sombra que poderíamos aplicar com box-shadow. O que podemos fazer para reverter essa situação, ée justamente aplicar sombra no container, ou utilizar a propriedade filter com drop-shadow -> filter: drop-shadow(). */
+.wrapper{
+    filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.655));
+    opacity: .8;
+
+    /* ? z-index com Valor -1 faz o elemento se posicionar atrás de outro elemento, e 1 posiciona à frente de outro elemento. */
+    z-index: -1;
+}
+
+.card{
+    position: relative;
+    width: 300px; height: 400px;
+    background-color: rgba(0, 0, 0, .6);
+
+    /* ? Recortando a figura. Muito útil para designs elegantes e suaves. */
+    clip-path: path("M 20,45 L 120,45 A 25,25 0,0,0 145,25 L 145,25 A 25,25 0,0,1 160,10 L 280,10 A 25,25 0,0,1 300,35 L 300,380 A 25,25 0,0,1 280,400 L 20,400 A 25,25 0,0,1 0,380 L 0,70 A 25,25 0,0,1 20,45  Z");
+    filter: blur(1px);
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: .7%; left: 0;
+    width: 142px; height: 42px;
+    
+    color: white;
+    background-color: rgb(128, 19, 19);
+    filter: drop-shadow(0px 0px 10px black);
+    clip-path: inset(6px 0 round 25px 0px);
+
+    font: italic bold 1.6em Arial, sans-serif;
+    letter-spacing: 5px; /* ? Dá espaço entre as letras */
+}
+
+/* .title::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    filter: blur(10px);
+    z-index: -1;
+    opacity: .1 ;
+} */
+
+.product-card-wrapper{
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.47));
+    z-index: -1;
+}
+
+.product-card{
+    position: relative;
+    width: 300px; height: 130px;
+    padding: 10px;
+    
+    clip-path: inset(0 round 30px 5px);
+
+    text-align: center;
+    
+    color: white;
+    background-color: rgb(128, 19, 19);
+}
+
+h2{
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 3px;
+}
+
+p{
+    opacity: .8;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+.actions .cart-icon{
+    border: 2px solid rgba(245, 245, 245, 0.489);
+    border-radius: 50%;
+    padding: 5px;
+
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.buy-now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 3px 8px;
+    border-radius: 30px;
+    border: 2px solid rgba(245, 245, 245, 0.489);
+
+    background-color: transparent;
+    color: white;
+    font-size: 1.1em;
+
+    cursor: pointer;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px; height: 30px;
+    border-radius: 30px;
+    gap: 5px;
+    
+    background-color: rgba(245, 245, 245, 0.203);
+}
+
+.options > span{
+    width: 15px; height: 15px;
+    border: 3px solid rgba(245, 245, 245, 0.571);
+    border-radius: 50%;
+}

@@ -1,0 +1,47 @@
+/* ! Testes com propriedade animation */
+
+@charset "UTF-8";
+
+*{ /* ! Configurações gerais */
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body{ /* ! Definindo o corpo e posicionando o elemento no centro */
+
+    width: 100vw; height: 100vh;
+}
+
+.square{ /* ! Configurando o básico do elemento */
+    width: 200px; height: 200px;
+    background-color: red;
+}
+
+.animation{ /* ! Configurando as propriedades "clássicas" da propriedade animation */
+
+    animation-name: mov-vertical; /* ? Nome de identificação para ser utilizado no @keyframes -> animação será iniciada e finalizada */
+
+    animation-duration: 1.5s; /* ? Duração da animação -> quanto tempo leva para ser finalizada -> segundos (s) ou milissegundos (ms) */
+    
+    animation-timing-function: linear; /* ? Curva de aceleração. Podendo ser: ease, ease-in, ease-out, ease-in-out, linear... */
+
+    animation-delay: 0s; /* ? Duração de inicialização da animação -> quanto tempo leva para iniciar -> segundos (s) ou milissegundos (ms) */
+
+    animation-iteration-count: infinite; /* ? Número de vezes que a animação será realizada -> Podendo ser infinita (infinite) ou um número estabelecido */
+    
+    animation-direction: alternate; /* ? Sentido da animação. Se apenas faz o movimento e ir em um sentido, se faz o movimento inverso, movimento de ir e voltar, no inverso idem. */
+    
+    animation-fill-mode: both; /* ? Determina em qual posição o elemento vai ficar no fim da animação */
+    
+    animation-play-state: running; /* ? Determina se a animação está rodando ou pausada. Muito útil para se utilizar com a pseudo-class -> hover. Dando como exemplo: fazemos uma animação infinita que pode ser parada, apenas se passar o mouse por cima do elemento. */
+
+    /* ! shorthand da propriedade animation */
+    /* * animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+    
+}
+
+@keyframes mov-vertical{
+    from {transform: translateY(0px);}
+    50%  {background-color: yellow;}
+    to   {transform: translateY(300px);}
+}
