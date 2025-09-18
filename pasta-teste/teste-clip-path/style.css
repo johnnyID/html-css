@@ -23,7 +23,7 @@ body{
     flex-direction: column;
 }
 
-/* ! Aqui utilizamos do container para aplicar sombras no elemento. Devido ao recorte feito no elemento, não é possível aplicar no mesmo, pois o recorte corta tudo do elemento, até mesmo a sombra que poderíamos aplicar com box-shadow. O que podemos fazer para reverter essa situação, ée justamente aplicar sombra no container, ou utilizar a propriedade filter com drop-shadow -> filter: drop-shadow(). */
+/* ! Aqui utilizamos do container para aplicar sombras no elemento. Devido ao recorte feito no elemento, não é possível aplicar no mesmo, pois o recorte corta tudo do elemento, até mesmo a sombra que poderíamos aplicar com box-shadow. O que podemos fazer para reverter essa situação, é justamente aplicar sombra no container, ou utilizar a propriedade filter com drop-shadow -> filter: drop-shadow(). */
 .wrapper{
     filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.655));
     opacity: .8;

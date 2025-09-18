@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100dvh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px; height: 200px;
+            background-color: rgb(46, 46, 138);
+            border-radius: 20px;
+
+        }
+
+        /* Permite que criemos regras personalizadas, um pouco parecido com as variáveis, porém com suporte de apenas 3 propriedades, sendo syntax: ""; inherits: true/false; initial-value: [valores de acordo com syntax]; */
+        @property --deg{
+            syntax: "<angle>";
+            inherits: true;
+            initial-value: 0deg;
+        }
+
+        div::after,
+        div::before{
+            content: "";
+            position: absolute;
+            width: 100%; height: 100%;
+            padding: 2px;
+            border-radius: inherit;
+            background: conic-gradient(
+                from var(--deg) at center,
+                blue,
+                rgb(150, 150, 248),
+                rgb(152, 152, 247),
+                blue
+                );
+            z-index: -2;
+            animation: autoRotate 2s linear infinite;
+        }
+
+        div::after{
+            filter: blur(10px);
+        }
+
+        @keyframes autoRotate{
+            to{
+                --deg: 360deg;
+            }
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
