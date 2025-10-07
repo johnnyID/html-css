@@ -1,0 +1,28 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100dvh;
+}
+
+body{
+    display: flex;
+    justify-content: center; align-items: center;
+}
+
+div{
+    position: relative;
+    width: 250px; height: 250px;
+    background-color: grey;
+    transition: margin 0.5s linear, border 0.4s linear;
+}
+
+div:hover{
+    margin-left: 20px;
+}
+
+div#oi{
+    background-color: red;
+}
